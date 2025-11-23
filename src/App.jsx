@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
-import Layout from './components/Layout/Layout';
+import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import BlogPage from './pages/BlogPage';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -29,6 +30,7 @@ function App() {
             <Route path="/blog/:slug" element={<BlogPage />} />
           </Routes>
         </Layout>
+        <Analytics />
       </BrowserRouter>
     </ThemeProvider>
   );
