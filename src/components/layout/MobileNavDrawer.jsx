@@ -22,12 +22,12 @@ const MobileNavDrawer = ({ isOpen, onClose, selectedCategory, onSelectCategory }
                 onClick={onClose}
             />
 
-            <div className="absolute left-0 top-0 bottom-0 w-[280px] bg-[var(--color-bg-primary)] border-r border-[var(--color-border)] shadow-xl flex flex-col">
-                <div className="p-6 border-b border-[var(--color-border)] flex justify-between items-center">
-                    <h2 className="text-xl font-bold text-[var(--color-text-primary)]">Arghya Logs</h2>
+            <div className="absolute left-0 top-0 bottom-0 w-[280px] bg-(--color-bg-primary) border-r border-(--color-border) shadow-xl flex flex-col">
+                <div className="p-6 border-b border-(--color-border) flex justify-between items-center">
+                    <h2 className="text-xl font-bold text-(--color-text-primary)">Arghya Logs</h2>
                     <button
                         onClick={onClose}
-                        className="p-1 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+                        className="p-1 text-(--color-text-secondary) hover:text-(--color-text-primary)"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -37,7 +37,7 @@ const MobileNavDrawer = ({ isOpen, onClose, selectedCategory, onSelectCategory }
 
                 <div className="flex-1 overflow-y-auto p-4">
                     <div className="mb-2 px-2">
-                        <span className="text-xs font-semibold tracking-wider text-[var(--color-text-secondary)] uppercase">
+                        <span className="text-xs font-semibold tracking-wider text-(--color-text-secondary) uppercase">
                             Categories
                         </span>
                     </div>

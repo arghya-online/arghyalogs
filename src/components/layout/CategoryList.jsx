@@ -44,18 +44,18 @@ const CategoryList = ({ selectedCategory, onSelectCategory, vertical = true }) =
               group relative flex items-center px-4 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer
               ${vertical ? 'w-full text-left' : 'whitespace-nowrap'}
               ${isActive
-                                ? 'text-[var(--color-text-primary)] bg-[var(--color-bg-secondary)]'
-                                : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-text-primary)]'
+                                ? 'text-(--color-text-primary) bg-(--color-bg-secondary)'
+                                : 'text-(--color-text-secondary) hover:bg-(--color-bg-secondary) hover:text-(--color-text-primary)'
                             }
             `}
                     >
                         {vertical && isActive && (
-                            <span className="absolute left-0 top-0 bottom-0 w-1 bg-[var(--color-text-primary)]" />
+                            <span className="absolute left-0 top-0 bottom-0 w-1 bg-(--color-text-primary)" />
                         )}
                         {vertical && !isActive && (
-                            <span className="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-[var(--color-border)] transition-colors duration-200" />
+                            <span className="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-(--color-border) transition-colors duration-200" />
                         )}
-                        <Icon className={`w-4 h-4 mr-3 ${isActive ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-text-secondary)] group-hover:text-[var(--color-text-primary)]'}`} />
+                        <Icon className={`w-4 h-4 mr-3 ${isActive ? 'text-(--color-text-primary)' : 'text-(--color-text-secondary) group-hover:text-(--color-text-primary)'}`} />
                         <span>{category}</span>
                     </button>
                 );

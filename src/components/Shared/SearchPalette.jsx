@@ -47,22 +47,22 @@ const SearchPalette = ({ isOpen, onClose }) => {
                 onClick={onClose}
             />
 
-            <div className="relative w-full max-w-2xl bg-[var(--color-bg-primary)] border border-[var(--color-border)] shadow-2xl overflow-hidden animate-fade-in-up">
-                <div className="flex items-center px-4 py-3 border-b border-[var(--color-border)]">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-[var(--color-text-secondary)] mr-3">
+            <div className="relative w-full max-w-2xl bg-(--color-bg-primary) border border-(--color-border) shadow-2xl overflow-hidden animate-fade-in-up">
+                <div className="flex items-center px-4 py-3 border-b border-(--color-border)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-(--color-text-secondary) mr-3">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                     </svg>
                     <input
                         ref={inputRef}
                         type="text"
-                        className="flex-1 bg-transparent border-none outline-none text-[var(--color-text-primary)] placeholder-[var(--color-text-secondary)] text-lg"
+                        className="flex-1 bg-transparent border-none outline-none text-(--color-text-primary) placeholder-(--color-text-secondary) text-lg"
                         placeholder="Search posts..."
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                     />
                     <button
                         onClick={onClose}
-                        className="ml-2 text-xs font-medium text-[var(--color-text-secondary)] border border-[var(--color-border)] px-2 py-1"
+                        className="ml-2 text-xs font-medium text-(--color-text-secondary) border border-(--color-border) px-2 py-1"
                     >
                         ESC
                     </button>
@@ -70,7 +70,7 @@ const SearchPalette = ({ isOpen, onClose }) => {
 
                 <div className="max-h-[60vh] overflow-y-auto">
                     {query.trim() === '' ? (
-                        <div className="p-8 text-center text-[var(--color-text-secondary)]">
+                        <div className="p-8 text-center text-(--color-text-secondary)">
                             <p className="text-sm">Type to search blogs by title, summary, or category.</p>
                         </div>
                     ) : filteredPosts.length > 0 ? (
@@ -79,24 +79,24 @@ const SearchPalette = ({ isOpen, onClose }) => {
                                 <button
                                     key={post.slug}
                                     onClick={() => handleSelectPost(post.slug)}
-                                    className="w-full text-left px-4 py-3 hover:bg-[var(--color-bg-secondary)] transition-colors group border-b border-[var(--color-border)] last:border-none"
+                                    className="w-full text-left px-4 py-3 hover:bg-(--color-bg-secondary) transition-colors group border-b border-(--color-border) last:border-none"
                                 >
                                     <div className="flex items-baseline justify-between mb-1">
-                                        <h4 className="text-base font-medium text-[var(--color-text-primary)] group-hover:text-[var(--color-text-primary)] transition-colors">
+                                        <h4 className="text-base font-medium text-(--color-text-primary) group-hover:text-(--color-text-primary) transition-colors">
                                             {post.title}
                                         </h4>
-                                        <span className="text-xs text-[var(--color-text-secondary)] uppercase tracking-wider ml-2">
+                                        <span className="text-xs text-(--color-text-secondary) uppercase tracking-wider ml-2">
                                             {post.category}
                                         </span>
                                     </div>
-                                    <p className="text-sm text-[var(--color-text-secondary)] line-clamp-1">
+                                    <p className="text-sm text-(--color-text-secondary) line-clamp-1">
                                         {post.summary}
                                     </p>
                                 </button>
                             ))}
                         </div>
                     ) : (
-                        <div className="p-8 text-center text-[var(--color-text-secondary)]">
+                        <div className="p-8 text-center text-(--color-text-secondary)">
                             <p>No results found for "{query}"</p>
                         </div>
                     )}

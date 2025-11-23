@@ -5,10 +5,10 @@ const TopBar = ({ onMenuClick, onSearchClick }) => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <header className="sticky top-0 z-20 w-full bg-[var(--color-bg-primary)]/80 backdrop-blur-md border-b border-[var(--color-border)] lg:border-none lg:bg-transparent lg:backdrop-blur-none px-4 py-3 flex items-center justify-between lg:justify-end">
+        <header className="sticky top-0 z-20 w-full bg-(--color-bg-primary)/80 backdrop-blur-md border-b border-(--color-border) lg:border-none lg:bg-transparent lg:backdrop-blur-none px-4 py-3 flex items-center justify-between lg:justify-end">
             <button
                 onClick={onMenuClick}
-                className="lg:hidden p-2 -ml-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+                className="lg:hidden p-2 -ml-2 text-(--color-text-secondary) hover:text-(--color-text-primary)"
                 aria-label="Open menu"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -16,14 +16,14 @@ const TopBar = ({ onMenuClick, onSearchClick }) => {
                 </svg>
             </button>
 
-            <span className="lg:hidden font-bold text-[var(--color-text-primary)]">
+            <span className="lg:hidden font-bold text-(--color-text-primary)">
                 Arghya Logs
             </span>
 
             <div className="flex items-center space-x-4">
                 <button
                     onClick={onSearchClick}
-                    className="p-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
+                    className="p-2 text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors"
                     aria-label="Search"
                     title="Search (Ctrl+K)"
                 >
@@ -33,18 +33,18 @@ const TopBar = ({ onMenuClick, onSearchClick }) => {
                 </button>
 
                 <div className="flex items-center space-x-3">
-                    <span className="text-sm font-medium text-[var(--color-text-secondary)] hidden sm:inline">Theme</span>
+                    <span className="text-sm font-medium text-(--color-text-secondary) hidden sm:inline">Theme</span>
                     <button
                         onClick={toggleTheme}
                         className={`
               relative inline-flex h-6 w-11 shrink-0 cursor-pointer border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none
-              ${theme === 'dark' ? 'bg-[var(--color-text-primary)]' : 'bg-gray-300'}
+              ${theme === 'dark' ? 'bg-(--color-text-primary)' : 'bg-gray-300'}
             `}
                         aria-label="Toggle theme"
                     >
                         <span
                             className={`
-                pointer-events-none inline-block h-5 w-5 transform bg-[var(--color-bg-primary)] shadow ring-0 transition duration-200 ease-in-out
+                pointer-events-none inline-block h-5 w-5 transform bg-(--color-bg-primary) shadow ring-0 transition duration-200 ease-in-out
                 ${theme === 'dark' ? 'translate-x-5' : 'translate-x-0'}
               `}
                         />

@@ -4,7 +4,7 @@ export const meta = {
     slug: 'robotics-intro',
     title: 'Introduction to Robotics',
     category: 'Robotics',
-    date: 'Nov 21, 2025',
+    date: 'Nov 23, 2025',
     summary: 'Exploring the intersection of mechanics, electronics, and code.',
     plainText: `Robotics is an interdisciplinary field integrating computer science, mechanics, and electronics. This blog explains how beginners can enter robotics in a simple, practical way.`
 };

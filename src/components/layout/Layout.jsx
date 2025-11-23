@@ -25,7 +25,7 @@ const Layout = ({ children, selectedCategory, onSelectCategory }) => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] transition-colors duration-300">
+        <div className="min-h-screen bg-(--color-bg-primary) text-(--color-text-primary) transition-colors duration-300">
             <SearchPalette isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
             <Sidebar

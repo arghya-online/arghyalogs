@@ -8,7 +8,7 @@ const LatestNotesSection = ({ posts, selectedCategory }) => {
 
     return (
         <section>
-            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-6">
+            <h2 className="text-2xl font-bold text-(--color-text-primary) mb-6">
                 {selectedCategory ? `${selectedCategory} Notes` : 'Latest Notes'}
             </h2>
 
@@ -18,7 +18,7 @@ const LatestNotesSection = ({ posts, selectedCategory }) => {
                         <NoteCard key={post.slug} post={post} />
                     ))
                 ) : (
-                    <div className="text-[var(--color-text-secondary)] py-8">
+                    <div className="text-(--color-text-secondary) py-8">
                         <p className="text-lg mb-2">
                             I didn't write anything here yet.
                         </p>

@@ -4,7 +4,7 @@ export const meta = {
     slug: 'james-webb-telescope',
     title: 'The James Web Space Telescope',
     category: 'Astronomy',
-    date: 'Nov 22, 2025',
+    date: 'Nov 23, 2025',
     summary: 'Unfolding the universe with infrared astronomy.',
     plainText: `A deep, casual, long-form introduction to the James Webb Space Telescope, how it works, why it uses infrared, and what makes its design so unique.`
 };
