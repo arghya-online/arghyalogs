@@ -18,16 +18,16 @@ const MobileNavDrawer = ({ isOpen, onClose, selectedCategory, onSelectCategory }
     return (
         <div className="fixed inset-0 z-50 lg:hidden">
             <div
-                className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
+                className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300"
                 onClick={onClose}
             />
 
-            <div className="absolute left-0 top-0 bottom-0 w-[280px] bg-(--color-bg-primary) border-r border-(--color-border) shadow-xl flex flex-col">
+            <div className="absolute left-0 top-0 bottom-0 w-[280px] bg-(--color-bg-primary) border-r border-(--color-border) shadow-xl flex flex-col animate-slide-in-left">
                 <div className="p-6 border-b border-(--color-border) flex justify-between items-center">
                     <h2 className="text-xl font-bold text-(--color-text-primary)">Arghya Logs</h2>
                     <button
                         onClick={onClose}
-                        className="p-1 text-(--color-text-secondary) hover:text-(--color-text-primary)"
+                        className="p-1 text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors duration-200"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
