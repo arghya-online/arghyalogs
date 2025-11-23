@@ -2,7 +2,7 @@ import React from 'react';
 
 export const meta = {
     slug: 'james-webb-telescope',
-    title: 'The James Webb Space Telescope',
+    title: 'The James Web Space Telescope',
     category: 'Astronomy',
     date: 'Nov 24, 2025',
     summary: 'Unfolding the universe with infrared astronomy.',
