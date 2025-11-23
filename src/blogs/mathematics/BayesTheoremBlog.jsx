@@ -2,7 +2,7 @@ import React from 'react';
 
 export const meta = {
   slug: 'bayes-theorem-mathematical-framework-modern-ai',
-  title: "Bayes' Theorem: The Mathematical Framework That Powers Modern AI",
+  title: "Bayes' Theorem: The Mathematical Framework That Powers Modern Computer Intelligence",
   category: 'Mathematics',
   date: 'Nov 23, 2025',
   summary:
@@ -15,7 +15,7 @@ const BayesTheoremBlog = () => {
   return (
     <article className="prose prose-invert">
       <h1 className="text-3xl font-bold mb-6">
-        Bayes&apos; Theorem: The Mathematical Framework That Powers Modern AI
+        Bayes&apos; Theorem
       </h1>
 
       <p className="mb-4">
