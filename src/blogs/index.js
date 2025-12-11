@@ -10,6 +10,9 @@ import { getReadingTime } from "../utils/readingTime";
 import LagrangianMechanics, {
   meta as lagrangianMeta,
 } from "./physics/LagrangianMechanics";
+import ReactSetupAndState, {
+  meta as reactMeta,
+} from "./frontend/ReactSetupAndState";
 
 const posts = [
   {
@@ -37,6 +40,11 @@ const posts = [
     Component: LagrangianMechanics,
     readingTime: getReadingTime(lagrangianMeta.plainText),
   },
-];
+  {
+    ...reactMeta,
+    Component: ReactSetupAndState,
+    readingTime: getReadingTime(reactMeta.plainText),
+  },
+].sort((a, b) => new Date(b.date) - new Date(a.date));
 
 export default posts;
