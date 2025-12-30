@@ -29,6 +29,10 @@ export default function Layout() {
             {/* Main Content Area */}
             <main className="flex-1 w-full max-w-5xl mx-auto p-6 pt-20 md:p-12 md:pt-12 relative">
                 <Outlet />
+                <footer className="mt-20 pt-8 border-t border-border text-center text-text-secondary text-sm">
+                    <p>Thanks for dropping by! Hope you found something useful (or at least mildly entertaining).</p>
+                    <p className="mt-2">&copy; {new Date().getFullYear()} Arghya Logs. Built with coffee and confusion.</p>
+                </footer>
             </main>
         </div>
     );

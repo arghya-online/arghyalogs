@@ -7,8 +7,8 @@
     /* Light Mode */
     --background: #ffffff;
     --surface: #f4f4f5;
-    --text-primary: #09090b;
-    --text-secondary: #52525b;
+    --text-primary: #000000;
+    --text-secondary: #27272a;
     --border: #e4e4e7;
     --accent: #000000;
   }

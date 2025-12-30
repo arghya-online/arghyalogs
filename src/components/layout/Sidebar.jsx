@@ -8,7 +8,15 @@ export default function Sidebar({ onOpenSearch }) {
     return (
         <aside className="hidden md:flex flex-col w-[260px] h-screen sticky top-0 border-r border-border bg-background">
             <div className="p-6 border-b border-border">
-                <h1 className="text-xl font-bold tracking-tight">Arghya Logs</h1>
+                <h1
+                    onClick={() => (window.location.href = "/")}
+                    role="button"
+                    tabIndex={0}
+                    className="text-xl font-bold tracking-tight cursor-pointer select-none"
+                >
+                    Arghya Logs
+                </h1>
+
                 <p className="text-xs text-text-secondary mt-1">
                     Engineering & Science Notes
                 </p>
@@ -19,7 +27,7 @@ export default function Sidebar({ onOpenSearch }) {
                 >
                     <Search className="h-3 w-3" />
                     <span className="flex-1">Search...</span>
-                    <kbd className="font-mono text-[10px] border border-border px-1 rounded">⌘K</kbd>
+                    <kbd className="font-mono text-[10px] border border-border px-1 rounded">Ctrl+K</kbd>
                 </button>
             </div>
 
