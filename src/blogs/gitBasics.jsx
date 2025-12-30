@@ -1,7 +1,7 @@
 import React from "react";
 import { CopyButton } from "../components/CopyButton";
 import HowGitTracksCode from "../assets/HowGitTracksCode.png";
-import GitWorkflow from "../assets/GitWorkflow.png";
+import GitWorkflow from "../assets/gitworkflow.png";
 import HowGitWorks from "../assets/HowGitWorks.png";
 
 export const metadata = {
