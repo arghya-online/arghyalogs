@@ -25,7 +25,7 @@ export default function MobileNav({ onOpenSearch }) {
     // Close on route change
     useEffect(() => {
         setIsOpen(false);
-    }, [location.pathname]);
+    }, [location]);
 
     return (
         <div className="md:hidden">
