@@ -5,7 +5,9 @@ export const getAllBlogs = () => {
     return Object.values(modules).map((module) => ({
         ...module.metadata,
         component: module.default,
-    })).sort((a, b) => new Date(b.date) - new Date(a.date));
+    }))
+        .filter(blog => blog.slug && blog.title) // Filter out invalid blogs
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
 };
 
 export const getLatestBlogs = (count = 5) => {
