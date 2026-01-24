@@ -31,6 +31,8 @@ export default function MobileNav({ onOpenSearch }) {
         <div className="md:hidden">
             {/* Trigger */}
             {/* Mobile Header */}
+            {/* Mobile Header */}
+            {/* Mobile Header */}
             <header className="fixed top-0 left-0 right-0 h-14 bg-background/80 backdrop-blur-md border-b border-border z-40 flex items-center justify-between px-4 md:hidden">
                 <div className="flex items-center gap-2">
                     <button
