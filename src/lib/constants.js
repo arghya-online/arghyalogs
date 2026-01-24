@@ -18,7 +18,5 @@ export const CATEGORIES = [
   { name: "Programming", slug: "/programming", icon: Code },
   { name: "Physics", slug: "/physics", icon: Atom },
   { name: "Robotics", slug: "/robotics", icon: Bot },
-  { name: "Backend", slug: "/backend", icon: Server },
-  { name: "Frontend", slug: "/frontend", icon: Monitor },
   { name: "3AM Thoughts", slug: "/3amthoughts", icon: Leaf },
 ];

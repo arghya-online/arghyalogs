@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import MobileNav from "./MobileNav";
 import SearchModal from "@/components/features/SearchModal";
+import BackToTop from "@/components/BackToTop";
 
 export default function Layout() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -41,6 +42,7 @@ export default function Layout() {
           </p>
         </footer>
       </main>
+      <BackToTop />
     </div>
   );
 }

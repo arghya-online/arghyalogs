@@ -1,8 +1,5 @@
 import React from "react";
 import { CopyButton } from "../components/CopyButton";
-import HowGitTracksCode from "../assets/HowGitTracksCode.png";
-import GitWorkflow from "../assets/gitworkflow.png";
-import HowGitWorks from "../assets/HowGitWorks.png";
 
 export const metadata = {
     title: "What Is Git",
@@ -28,7 +25,7 @@ function CodeBlock({ code }) {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <img src={HowGitWorks} alt="How Git Works" className="w-full my-8 border border-border" />
+            <img src="/blogs/what-is-git/how-git-works.png" alt="How Git Works" className="w-full my-8 border border-border" />
 
             <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
                 What Is Git
@@ -159,7 +156,7 @@ export default function BlogContent() {
 
             <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">Repository</h3>
             <p className="mb-8 text-lg leading-relaxed text-text-secondary">The repository is the permanent storage area where your project files are stored. It is where you keep your project files and code.</p>
-            <img src={HowGitTracksCode} alt="How Git Tracks Code" className="w-full my-8 border border-border" />
+            <img src="/blogs/what-is-git/how-git-tracks-code.png" alt="How Git Tracks Code" className="w-full my-8 border border-border" />
 
             <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">Common Git Commands</h2>
 
@@ -290,7 +287,7 @@ export default function BlogContent() {
                 - Create branches when you want to experiment without fear
             </p>
 
-            <img src={GitWorkflow} alt="Git Workflow" className="w-full my-8 border border-border" />
+            <img src="/blogs/what-is-git/git-workflow.png" alt="Git Workflow" className="w-full my-8 border border-border" />
 
             <h3 className="mt-12 mb-4 text-2xl font-semibold text-text-primary">
                 Simple Project Setup Example

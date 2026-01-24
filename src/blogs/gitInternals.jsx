@@ -1,6 +1,4 @@
 import React from "react";
-import gitInternals1 from "../assets/gitInternals1.png";
-import gitInternals2 from "../assets/gitInternals2.png";
 
 export const metadata = {
   title: "Understanding the .git Folder",
@@ -15,7 +13,7 @@ export const metadata = {
 export default function BlogContent() {
   return (
     <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-      <img src={gitInternals1} alt="gitInternalHeader" />
+      <img src="/blogs/git-internals/header.png" alt="gitInternalHeader" />
       <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
         Understanding the .git Folder
       </h2>
@@ -286,7 +284,8 @@ export default function BlogContent() {
           Next, Git creates a commit object. This commit points to the root tree
           that represents the full snapshot of the project. Along with this
           reference, Git stores metadata such as the author name, commit
-          message, timestamp, and a link to the parent commit.
+          message, timestamp, and a link to the parent commit, which is how Git builds
+          history.
         </p>
         <p className="mb-6 text-lg leading-relaxed text-text-secondary">
           Finally, Git updates history by moving the current branch pointer to
@@ -303,7 +302,7 @@ export default function BlogContent() {
       </section>
 
       <hr className="my-10 border-border" />
-      <img src={gitInternals2} alt="gitInternals" />
+      <img src="/blogs/git-internals/diagram.png" alt="gitInternals" />
       <hr className="my-10 border-border" />
 
       <h3 className="mt-12 mb-4 text-2xl font-semibold text-text-primary">
