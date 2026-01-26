@@ -6,15 +6,9 @@ import BlogPost from "@/pages/BlogPost";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 
-import { useState } from "react";
-import LoadingScreen from "@/components/LoadingScreen";
-
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
       <BrowserRouter>
         <Analytics />
         <Routes>
