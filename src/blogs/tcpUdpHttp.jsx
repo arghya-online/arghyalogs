@@ -132,7 +132,6 @@ export default function BlogContent() {
                 <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
                     UDP: The Speed Demon
                 </h3>
-                {/* Image Placeholder: UDP Speed Diagram */}
                 <p className="mb-4 text-lg leading-relaxed text-text-secondary">
                     UDP, or User Datagram Protocol, focuses on speed and minimal
                     delay.

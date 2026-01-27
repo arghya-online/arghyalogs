@@ -11,7 +11,7 @@ export default function SearchModal({ isOpen, onClose }) {
     const navigate = useNavigate();
     const inputRef = useRef(null);
 
-    // Search logic
+
     useEffect(() => {
         if (!query) {
             setResults([]);
@@ -29,7 +29,7 @@ export default function SearchModal({ isOpen, onClose }) {
     // Animation and focus
     useEffect(() => {
         if (isOpen) {
-            document.body.style.overflow = "hidden"; // Prevent scrolling
+            document.body.style.overflow = "hidden";
             gsap.to(modalRef.current, { opacity: 1, duration: 0.2, display: "flex" });
             setTimeout(() => inputRef.current?.focus(), 100);
         } else {
@@ -44,8 +44,6 @@ export default function SearchModal({ isOpen, onClose }) {
         }
     }, [isOpen]);
 
-    // Keyboard shortcut (ESC) is handled by parent or here?
-    // Let's handle generic ESC here as backup
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === "Escape" && isOpen) onClose();

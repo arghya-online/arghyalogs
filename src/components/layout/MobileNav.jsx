@@ -22,17 +22,12 @@ export default function MobileNav({ onOpenSearch }) {
         }
     }, [isOpen]);
 
-    // Close on route change
     useEffect(() => {
         setIsOpen(false);
     }, [location]);
 
     return (
         <div className="md:hidden">
-            {/* Trigger */}
-            {/* Mobile Header */}
-            {/* Mobile Header */}
-            {/* Mobile Header */}
             <header className="fixed top-0 left-0 right-0 h-14 bg-background/80 backdrop-blur-md border-b border-border z-40 flex items-center justify-between px-4 md:hidden">
                 <div className="flex items-center gap-2">
                     <button
@@ -57,14 +52,12 @@ export default function MobileNav({ onOpenSearch }) {
                 </div>
             </header>
 
-            {/* Overlay */}
             <div
                 ref={overlayRef}
                 onClick={() => setIsOpen(false)}
                 className="fixed inset-0 bg-black/50 z-40 hidden opacity-0"
             />
 
-            {/* Drawer */}
             <div
                 ref={drawerRef}
                 className="fixed inset-y-0 left-0 w-72 bg-background border-r border-border z-50 transform -translate-x-full shadow-xl flex flex-col"

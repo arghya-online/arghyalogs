@@ -13,15 +13,15 @@ export default function LoadingScreen({ onComplete }) {
             onComplete: onComplete,
         });
 
-        // Split text logic
+
         const chars = textWrapperRef.current.querySelectorAll(".char");
 
-        // Initial setup
+
         tl.set(containerRef.current, { autoAlpha: 1 });
         tl.set(chars, { y: 100, opacity: 0 });
         tl.set(bgRef.current, { scale: 1.1 });
 
-        // Sequence
+
         tl.to(bgRef.current, {
             scale: 1,
             duration: 4,
@@ -46,7 +46,7 @@ export default function LoadingScreen({ onComplete }) {
                 "-=0.5"
             );
 
-        // Exit animation
+
         tl.to([textWrapperRef.current, subTextRef.current, progressRef.current], {
             opacity: 0,
             y: -50,
@@ -72,7 +72,6 @@ export default function LoadingScreen({ onComplete }) {
             ref={containerRef}
             className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black text-white invisible overflow-hidden"
         >
-            {/* Background with slight movement */}
             <div ref={bgRef} className="absolute inset-0 bg-neutral-900 z-0">
                 <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-80"></div>

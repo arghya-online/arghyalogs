@@ -6,7 +6,7 @@ export const getAllBlogs = () => {
         ...module.metadata,
         component: module.default,
     }))
-        .filter(blog => blog.slug && blog.title) // Filter out invalid blogs
+        .filter(blog => blog.slug && blog.title)
         .sort((a, b) => new Date(b.date) - new Date(a.date));
 };
 

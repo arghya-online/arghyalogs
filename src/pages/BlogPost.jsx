@@ -7,7 +7,6 @@ export default function BlogPost() {
     const blog = getBlogBySlug(slug);
 
     if (!blog) {
-        // Ideally 404 page, but for now redirect or show error
         return <div className="p-12 text-center">Post not found</div>;
     }
 
