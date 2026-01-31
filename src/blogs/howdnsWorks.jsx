@@ -5,7 +5,7 @@ export const metadata = {
     title: "How DNS Resolution Works",
     slug: "dns-resolution",
     date: "2026-01-24",
-    category: "Programming",
+    category: "Networking",
     readTime: "8 min",
     summary:
         "Before a website loads or an app connects, there is a small step that decides everything that follows. Your system needs to find the correct place to send the request. It is not trying to understand the page or fetch content yet. It is only trying to answer one simple question. Where should this name point to? If that answer is wrong or missing, nothing else even starts.",

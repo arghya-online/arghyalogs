@@ -4,7 +4,7 @@ export const metadata = {
     title: "How the Internet Reaches Your Device",
     slug: "how-internet-reaches-device",
     date: "2026-01-27",
-    category: "Programming",
+    category: "Networking",
     readTime: "7 min",
     summary:
         "From home modems to cloud gateways, understand how data travels. Learn about routers, switches, firewalls, and load balancers in both physical and cloud networks.",

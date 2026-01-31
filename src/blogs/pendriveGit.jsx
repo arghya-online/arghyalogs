@@ -4,7 +4,7 @@ import { CopyButton } from "../components/CopyButton";
 export const metadata = {
   title: "Why Version Control Exists",
   slug: "why-version-control-exists",
-  date: "2026-01-13",
+  date: "2026-01-30",
   category: "Programming",
   readTime: "6 min",
   summary:

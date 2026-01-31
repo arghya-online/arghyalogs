@@ -16,6 +16,7 @@ export const CATEGORIES = [
   { name: "Mathematics", slug: "/mathematics", icon: Calculator },
   { name: "Astronomy", slug: "/astronomy", icon: Telescope },
   { name: "Programming", slug: "/programming", icon: Code },
+  { name: "Networking", slug: "/networking", icon: Server },
   { name: "Physics", slug: "/physics", icon: Atom },
   { name: "Robotics", slug: "/robotics", icon: Bot },
   { name: "3AM Thoughts", slug: "/3amthoughts", icon: Leaf },

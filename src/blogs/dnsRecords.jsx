@@ -4,7 +4,7 @@ export const metadata = {
     title: "DNS Record Types Explained",
     slug: "dns-record-types-explained",
     date: "2026-01-26",
-    category: "Programming",
+    category: "Networking",
     readTime: "5 min",
     summary:
         "A simple and practical guide to understanding DNS records like A, CNAME, MX, and NS, and how they work together to make the internet function.",

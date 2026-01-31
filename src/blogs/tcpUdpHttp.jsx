@@ -4,7 +4,7 @@ export const metadata = {
     title: "The Invisible Rules: TCP, UDP, and HTTP",
     slug: "tcp-udp-http-invisible-rules",
     date: "2026-01-27",
-    category: "Programming",
+    category: "Networking",
     readTime: "8 min",
     summary:
         "The internet runs on a set of invisible rules called protocols. Understand how TCP, UDP, and HTTP work together to power everything from web browsing to live streaming.",
