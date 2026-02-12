@@ -7,7 +7,7 @@ export const metadata = {
     category: "Physics",
     readTime: "8 min",
     summary:
-        "Forget the 'messy room' analogy. Entropy is the reason engines can't be perfect, why time only moves forward, and why the universe demands a tax on every single energy transfer. Let's break down the most misunderstood concept in engineering.",
+        "Forget that messy room example. Entropy is way more serious than that. It’s the reason no engine, no matter how advanced, can ever touch 100 percent efficiency. It’s the reason heat naturally flows only one way. It’s like nature has a built-in rule that says, “You can convert energy, but you’ll never get all of it back.” Every time energy moves or changes form, something is lost in terms of usefulness. That unavoidable loss is entropy. And once you see it this way, thermodynamics stops feeling random and starts feeling logical.",
 };
 
 export default function BlogContent() {
