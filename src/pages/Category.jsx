@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { getBlogsByCategory } from "@/lib/blogs";
 import BlogCard from "@/components/features/BlogCard";
+import { cn } from "@/lib/utils";
 
 export default function Category() {
     const { category } = useParams();
@@ -8,7 +9,9 @@ export default function Category() {
 
     return (
         <div className="space-y-8">
-            <div className="border-b border-border pb-6">
+            <div className={cn(
+                "border-b border-border pb-6"
+            )}>
                 <h1 className="text-3xl font-bold capitalize">{category}</h1>
                 <p className="text-text-secondary mt-1">
                     {blogs.length} {blogs.length === 1 ? 'Note' : 'Notes'}

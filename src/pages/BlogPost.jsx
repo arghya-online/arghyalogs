@@ -1,6 +1,7 @@
 import { useParams, Navigate, Link } from "react-router-dom";
 import { getBlogBySlug } from "@/lib/blogs";
 import { ArrowLeft } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function BlogPost() {
     const { category, slug } = useParams();
@@ -16,13 +17,18 @@ export default function BlogPost() {
         <article className="w-full mx-auto">
             <Link
                 to={`/${category}`}
-                className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary mb-8 transition-colors"
+                className={cn(
+                    "inline-flex items-center gap-2 text-sm text-text-secondary mb-8 transition-colors",
+                    "hover:text-text-primary"
+                )}
             >
                 <ArrowLeft className="h-4 w-4" />
                 Back to {category}
             </Link>
 
-            <header className="mb-10 border-b border-border pb-6">
+            <header className={cn(
+                "mb-10 border-b border-border pb-6"
+            )}>
                 <h1 className="text-3xl md:text-4xl font-bold text-text-primary mb-4 leading-tight">
                     {blog.title}
                 </h1>

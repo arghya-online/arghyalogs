@@ -9,9 +9,11 @@ import {
   Layers,
   Code,
   Leaf,
+  Briefcase
 } from "lucide-react";
 
 export const CATEGORIES = [
+  { name: "Portfolio", slug: "/portfolio", icon: Briefcase },
   { name: "Take Home", slug: "/", icon: Home },
   { name: "Mathematics", slug: "/mathematics", icon: Calculator },
   { name: "Astronomy", slug: "/astronomy", icon: Telescope },

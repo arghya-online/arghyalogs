@@ -9,15 +9,23 @@ export default function BlogCard({ blog }) {
   return (
     <Link
       to={`/${categorySlug}/${blog.slug}`}
-      className="block group p-4 -mx-4 rounded-lg transition-colors hover:bg-surface border border-transparent hover:border-border"
+      className={cn(
+        "block group p-4 -mx-4 rounded-lg border border-transparent transition-colors",
+        "hover:bg-surface hover:border-border"
+      )}
     >
-      <div className="flex items-center justify-between text-xs text-text-secondary mb-2">
-        <span>{blog.date}</span>
+      <div className="flex items-center justify-between text-xs text-text-secondary mb-2 font-mono">
+        <time>{blog.date}</time>
         <span>{blog.readTime}</span>
       </div>
-      <h3 className="text-lg font-medium text-text-primary group-hover:text-accent transition-colors">
+
+      <h3 className={cn(
+        "text-lg font-medium text-text-primary transition-colors",
+        "group-hover:text-accent"
+      )}>
         {blog.title}
       </h3>
+
       <p className="text-sm text-text-secondary mt-1 line-clamp-2">
         {blog.summary}
       </p>

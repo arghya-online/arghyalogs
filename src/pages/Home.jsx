@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { getLatestBlogs } from "@/lib/blogs";
 import BlogCard from "@/components/features/BlogCard";
-import { Github, Twitter, Youtube } from "lucide-react";
+import { Github, Twitter, Youtube, Briefcase } from "lucide-react";
 
 export default function Home() {
     const latestBlogs = getLatestBlogs();
@@ -11,9 +12,7 @@ export default function Home() {
             <section>
                 <h1 className="text-3xl font-bold mb-4">Who Am I?</h1>
                 <p className="text-text-secondary leading-relaxed max-w-prose mb-6">
-                    Hi, I’m Arghya, a engineer from Kolkata who likes to build things. Most of the time I am either building something on the web or trying to understand a concept properly enough to explain it in simple words.
-                    <br /><br />
-                    This space is where I keep those explanations. I write about mathematics, physics, frontend, backend, and sometimes astronomy, not as tutorials but as organized notes for my future self. If any of it helps someone else think a little clearer or solve a small problem, then this page has done its job.
+                    Visit my portfolio. But before give a read to my write-ups.
                 </p>
                 <p className="text-text-secondary leading-relaxed max-w-prose mb-4">
                     You can also catch me hanging out in these zones:
@@ -46,6 +45,13 @@ export default function Home() {
                         <Youtube className="h-5 w-5 group-hover:scale-110 transition-transform" />
                         <span className="font-medium">YouTube</span>
                     </a>
+                    <Link
+                        to="/portfolio"
+                        className="flex items-center gap-2 text-text-secondary hover:text-text-primary transition-colors group"
+                    >
+                        <Briefcase className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                        <span className="font-medium">Portfolio</span>
+                    </Link>
                 </div>
             </section>
 
