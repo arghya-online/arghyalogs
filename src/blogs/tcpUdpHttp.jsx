@@ -15,8 +15,6 @@ export default function BlogContent() {
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
             <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
                 TCP, UDP, and HTTP
-                <br />
-                https://w5ptr5rw-3000.inc1.devtunnels.ms/
             </h2>
 
             <p className="mb-4 text-lg leading-relaxed text-text-secondary">
