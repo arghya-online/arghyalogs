@@ -25,11 +25,11 @@ function CodeBlock({ code }) {
 export default function BlogContent() {
   return (
     <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-      <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+      <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
         Life Before Version Control
       </h2>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         The first version control system was introduced in 1972, at Bell Labs by
         Marc Rochkind. It was known as SCCS (Source Code Control System). But
         before this, to work collaboratively on a large code base, engineers
@@ -45,7 +45,7 @@ export default function BlogContent() {
         and losing progress was a very real and very common fear.
       </p>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         Even though software was smaller back then, the problems were already
         huge. Once a project crossed a few thousand lines, it became difficult
         to understand what had changed and why. If a bug appeared, the only way
@@ -59,11 +59,11 @@ export default function BlogContent() {
 
       <hr className="my-10 border-border" />
 
-      <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+      <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
         How a pen drive was used to share code
       </h2>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         In the early days, sharing code often meant copying the project onto a
         pen drive and passing it around between developers. One person would
         work on the code, finish their changes, and then hand over the pendrive
@@ -75,7 +75,7 @@ export default function BlogContent() {
         actually writing code.
       </p>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         This pendrive workflow became normal because it was the only
         “structured” method available at that time. But it was slow and fragile.
         If someone forgot to copy the latest folder, or if they copied the wrong
@@ -89,11 +89,11 @@ export default function BlogContent() {
 
       <hr className="my-10 border-border" />
 
-      <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+      <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
         Problems with pendrives
       </h2>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         Pendrives introduced more problems than they solved. It was very easy to
         overwrite someone else’s changes without even realising it, especially
         when multiple people were working on the same files. There was always
@@ -105,7 +105,7 @@ export default function BlogContent() {
         build software.
       </p>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         The scariest part was how silent the failure was. A pendrive workflow
         could look fine for days, until someone suddenly noticed that a bug fix
         was missing, or a new feature never appeared in the final build. Then
@@ -119,11 +119,11 @@ export default function BlogContent() {
 
       <hr className="my-10 border-border" />
 
-      <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+      <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
         The email attachment method
       </h2>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         When teams did not have a pendrive, email was the next option. They
         would send code as zipped folders and attach them in long email threads.
         At first this felt advanced, because at least the code could be stored
@@ -134,7 +134,7 @@ export default function BlogContent() {
         where the email subject lines mattered more than the code itself.
       </p>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         As projects grew, email became even worse. Large attachments took time
         to send, people forgot to include the newest folder, and sometimes
         partial code updates were sent instead of the full project. The biggest
@@ -147,11 +147,11 @@ export default function BlogContent() {
 
       <hr className="my-10 border-border" />
 
-      <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+      <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
         The “final, final_v2, latest_final” folder culture
       </h2>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         Because the risk was high, developers created their own safety
         mechanism. That mechanism was folder duplication. Every time something
         major changed, a new folder was created. It was not uncommon to see
@@ -179,7 +179,7 @@ export default function BlogContent() {
         a world where code history did not exist.
       </p>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         This folder culture created a weird kind of fear-driven workflow.
         Developers constantly worried that something might be lost, so they
         saved copies again and again. But ironically, the more copies they
@@ -192,11 +192,11 @@ export default function BlogContent() {
 
       <hr className="my-10 border-border" />
 
-      <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+      <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
         Multiple developers editing the same code without version control
       </h2>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         The worst situation happened when two developers edited the same file.
         Without version control, there was no safe way to handle this. If one
         person changed the UI layout and another person changed the API
@@ -208,7 +208,7 @@ export default function BlogContent() {
         computer.
       </p>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         This problem becomes even bigger in real projects where files are
         interconnected. A change in one file often affects another. Without
         history tracking, debugging becomes hard because the team cannot see
@@ -220,11 +220,11 @@ export default function BlogContent() {
 
       <hr className="my-10 border-border" />
 
-      <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+      <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
         Why version control became mandatory
       </h2>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         Eventually, the industry realized that these manual workflows were not
         just inefficient. They were dangerous. As software moved from small
         programs to large systems, developers needed something more reliable
@@ -234,7 +234,7 @@ export default function BlogContent() {
         of overwriting them. That demand is what made version control important.
       </p>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         Version control solved the exact pains developers suffered for years. It
         introduced a proper history of code changes. It made it possible to go
         back in time if a bug was introduced. It made collaboration safe because
@@ -245,7 +245,7 @@ export default function BlogContent() {
         returning to hiding cash under your mattress.
       </p>
 
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         In the end, version control exists because software development became
         serious. It became team-based, fast-moving, and high stakes. And in such
         a world, code cannot be treated like random files copied into random

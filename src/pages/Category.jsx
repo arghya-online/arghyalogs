@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { getBlogsByCategory } from "@/lib/blogs";
 import BlogCard from "@/components/features/BlogCard";
 import { cn } from "@/lib/utils";
+import { Helmet } from 'react-helmet-async';
 
 export default function Category() {
     const { category } = useParams();
@@ -9,6 +10,10 @@ export default function Category() {
 
     return (
         <div className="space-y-8">
+            <Helmet>
+                <title>{category ? category.charAt(0).toUpperCase() + category.slice(1) : 'Category'} - Arghya Logs</title>
+                <meta name="description" content={`Explore all engineering and science notes in the ${category} category.`} />
+            </Helmet>
             <div className={cn(
                 "border-b border-border pb-6"
             )}>

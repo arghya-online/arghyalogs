@@ -14,15 +14,15 @@ export default function BlogContent() {
   return (
     <article className="max-w-none mx-auto sm:px-6 text-text-primary">
       <img src="/blogs/git-internals/header.png" alt="gitInternalHeader" />
-      <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+      <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
         Understanding the .git Folder
       </h2>
 
       <section>
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           What the .git Folder Is
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           The{" "}
           <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm text-accent">
             .git
@@ -44,10 +44,10 @@ export default function BlogContent() {
           history of your project behind the scenes.
         </p>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Why the .git Folder Exists
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           Git needs a dedicated place to store complete snapshots of a project
           rather than just individual file changes, and that place is the{" "}
           <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm text-accent">
@@ -63,10 +63,10 @@ export default function BlogContent() {
           a normal folder of files with no history or version tracking.
         </p>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Mental Model
         </h3>
-        <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
           Your project folder is simply the workspace where you write and edit
           files. It contains the code you can see and touch, but it does not
           remember anything about the past. The{" "}
@@ -84,10 +84,10 @@ export default function BlogContent() {
       <hr className="my-10 border-border" />
 
       <section>
-        <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+        <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
           Git Objects: Blob, Tree, Commit
         </h2>
-        <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
           Git stores your entire project using three fundamental object types:{" "}
           <span className="font-semibold text-text-primary">blob</span>,{" "}
           <span className="font-semibold text-text-primary">tree</span>, and{" "}
@@ -99,10 +99,10 @@ export default function BlogContent() {
           every version you see in Git.
         </p>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Blob Object (File Content)
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           A <span className="font-semibold text-text-primary">blob</span> stores
           only the raw content of a file and nothing else. It does not know the
           file name, its path, or where it lives in the folder structure.
@@ -111,10 +111,10 @@ export default function BlogContent() {
           duplicate data.
         </p>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Tree Object (Directory Structure)
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           A <span className="font-semibold text-text-primary">tree</span> object
           represents a folder in Git. It stores the names of files and
           directories and preserves the complete folder hierarchy of the
@@ -123,10 +123,10 @@ export default function BlogContent() {
           allowing Git to describe the exact structure of a snapshot.
         </p>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Commit Object (Snapshot)
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           A <span className="font-semibold text-text-primary">commit</span>{" "}
           represents a complete snapshot of the project at a specific point in
           time. It points to a single root tree that describes the entire
@@ -136,10 +136,10 @@ export default function BlogContent() {
           history.
         </p>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Object Relationship
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           In Git, objects are connected in a simple and logical chain that
           allows Git to rebuild any version of a project at any time. A commit
           sits at the top and represents a snapshot in history. That commit
@@ -149,7 +149,7 @@ export default function BlogContent() {
           references from commit to tree to blobs, Git can reconstruct the exact
           state of the project for any commit.
         </p>
-        <ul className="list-disc list-inside space-y-2 text-lg text-text-secondary mb-6">
+        <ul className="list-disc list-inside space-y-2 text-base sm:text-lg text-text-secondary mb-6">
           <li>
             A <span className="font-semibold text-text-primary">commit</span>{" "}
             points to a single tree that represents the full project snapshot
@@ -168,14 +168,14 @@ export default function BlogContent() {
       <hr className="my-10 border-border" />
 
       <section>
-        <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+        <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
           How Git Tracks Changes
         </h2>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Snapshot-Based System
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           Git works by storing full snapshots of your project instead of
           recording line-by-line changes. Each commit represents the complete
           state of the project at that moment in time. When files do not change
@@ -184,10 +184,10 @@ export default function BlogContent() {
           lightweight even for large projects.
         </p>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Efficiency Behind the Scenes
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           Git is highly efficient because it avoids duplicating data. Rather
           than copying file contents again and again, it uses references to
           already existing objects. This means multiple commits can safely point
@@ -195,10 +195,10 @@ export default function BlogContent() {
           and storage.
         </p>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Mental Model
         </h3>
-        <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
           A helpful way to think about Git is as a photo album of your project’s
           life. Each commit is a photograph that captures exactly how the
           project looked at that moment. Git does not store instructions on how
@@ -210,27 +210,27 @@ export default function BlogContent() {
       <hr className="my-10 border-border" />
 
       <section>
-        <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+        <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
           What Happens Internally During git add
         </h2>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Working Directory
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           The working directory is where your files exist as normal files on
           disk. Git sees them, but does not track any changes until you
           explicitly tell it to.
         </p>
-        <ul className="list-disc list-inside space-y-2 text-lg text-text-secondary mb-4">
+        <ul className="list-disc list-inside space-y-2 text-base sm:text-lg text-text-secondary mb-4">
           <li>Files are normal disk files</li>
           <li>Git does nothing until instructed</li>
         </ul>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Staging Area (Index)
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           The staging area is where Git prepares the next snapshot. Running{" "}
           <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm text-accent">
             git add
@@ -238,7 +238,7 @@ export default function BlogContent() {
           takes the current file content, creates blobs if needed, and stores
           references to them in the index.
         </p>
-        <ul className="list-disc list-inside space-y-2 text-lg text-text-secondary mb-4">
+        <ul className="list-disc list-inside space-y-2 text-base sm:text-lg text-text-secondary mb-4">
           <li>
             <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm text-accent">
               git add
@@ -248,17 +248,17 @@ export default function BlogContent() {
           <li>The index stores references, not copies</li>
         </ul>
 
-        <h3 className="mt-8 mb-4 text-2xl font-semibold text-text-primary">
+        <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Key Insight
         </h3>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm text-accent">
             git add
           </code>{" "}
           does not create a commit. It only prepares what will go into the next
           snapshot.
         </p>
-        <ul className="list-disc list-inside space-y-2 text-lg text-text-secondary mb-6">
+        <ul className="list-disc list-inside space-y-2 text-base sm:text-lg text-text-secondary mb-6">
           <li>Prepares the snapshot</li>
           <li>Commit happens later</li>
         </ul>
@@ -267,10 +267,10 @@ export default function BlogContent() {
       <hr className="my-10 border-border" />
 
       <section>
-        <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+        <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
           What Happens Internally During git commit
         </h2>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           When you run{" "}
           <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm text-accent">
             git commit
@@ -280,14 +280,14 @@ export default function BlogContent() {
           objects that describe the exact folder and file structure of the
           project at that moment.
         </p>
-        <p className="mb-4 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
           Next, Git creates a commit object. This commit points to the root tree
           that represents the full snapshot of the project. Along with this
           reference, Git stores metadata such as the author name, commit
           message, timestamp, and a link to the parent commit, which is how Git builds
           history.
         </p>
-        <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+        <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
           Finally, Git updates history by moving the current branch pointer to
           this new commit. The earlier commits are not modified or deleted. They
           remain exactly as they were, which is why Git history is stable and
@@ -296,7 +296,7 @@ export default function BlogContent() {
       </section>
 
       <section>
-        <h2 className="mt-12 mb-6 text-3xl font-bold tracking-tight text-text-primary">
+        <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
           Building the Right Mental Model of Git
         </h2>
       </section>
@@ -305,10 +305,10 @@ export default function BlogContent() {
       <img src="/blogs/git-internals/diagram.png" alt="gitInternals" />
       <hr className="my-10 border-border" />
 
-      <h3 className="mt-12 mb-4 text-2xl font-semibold text-text-primary">
+      <h3 className="mt-12 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
         Final Words
       </h3>
-      <p className="mb-6 text-lg leading-relaxed text-text-secondary">
+      <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         Understanding the{" "}
         <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm text-accent">
           .git

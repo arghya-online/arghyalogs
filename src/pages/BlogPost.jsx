@@ -1,7 +1,9 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { getBlogBySlug } from "@/lib/blogs";
+import { getBlogBySlug, getBlogsByCategory } from "@/lib/blogs";
 import { ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Helmet } from 'react-helmet-async';
+import BlogCard from "@/components/features/BlogCard";
 
 export default function BlogPost() {
     const { category, slug } = useParams();
@@ -12,9 +14,18 @@ export default function BlogPost() {
     }
 
     const Component = blog.component;
+    const relatedBlogs = getBlogsByCategory(category).filter(b => b.slug !== slug).slice(0, 3);
 
     return (
-        <article className="w-full mx-auto">
+        <article className="w-full mx-auto pb-12">
+            <Helmet>
+                <title>{blog.title} - Arghya Logs</title>
+                <meta name="description" content={blog.summary} />
+                <meta property="og:title" content={blog.title} />
+                <meta property="og:description" content={blog.summary} />
+                <meta property="og:type" content="article" />
+            </Helmet>
+
             <Link
                 to={`/${category}`}
                 className={cn(
@@ -42,6 +53,17 @@ export default function BlogPost() {
             <div className="prose prose-sm md:prose-base prose-invert prose-neutral max-w-none">
                 <Component />
             </div>
+
+            {relatedBlogs.length > 0 && (
+                <div className="mt-16 pt-8 border-t border-border">
+                    <h3 className="text-2xl font-bold mb-6 text-text-primary">Read Next</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {relatedBlogs.map(related => (
+                            <BlogCard key={related.slug} blog={related} />
+                        ))}
+                    </div>
+                </div>
+            )}
         </article>
     );
 }
