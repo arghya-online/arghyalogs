@@ -10,12 +10,13 @@ import {
   Code,
   Leaf,
   Briefcase,
-  FileCode
+  FileCode,
 } from "lucide-react";
 
 export const CATEGORIES = [
   { name: "Portfolio", slug: "/portfolio", icon: Briefcase },
   { name: "Take Home", slug: "/", icon: Home },
+  { name: "Codes", slug: "/codes", icon: Code },
   { name: "Mathematics", slug: "/mathematics", icon: Calculator },
   { name: "JavaScript", slug: "/javascript", icon: FileCode },
   { name: "Programming", slug: "/programming", icon: Code },
