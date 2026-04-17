@@ -45,7 +45,7 @@ export default function BlogContent() {
           For example, if we want to store someone’s name in JavaScript, we
           could write:
         </p>
-        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-6 border border-border">
+        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-6 border border-border">
           <code className="font-mono text-sm leading-relaxed">
             <span className="text-[#569cd6]">let</span> name ={" "}
             <span className="text-[#ce9178]">"Arjun"</span>;
@@ -68,7 +68,7 @@ export default function BlogContent() {
           will remember that the value inside the box is <code>"Arjun"</code>.
           You can print it like this:
         </p>
-        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-6 border border-border">
+        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-6 border border-border">
           <code className="font-mono text-sm leading-relaxed">
             <span className="text-[#4ec9b0]">console</span>.
             <span className="text-[#dcdcaa]">log</span>(name);
@@ -88,7 +88,7 @@ export default function BlogContent() {
           refer to a name or age, you would have to type the value manually over
           and over again.
         </p>
-        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-6 border border-border">
+        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-6 border border-border">
           <code className="font-mono text-sm leading-relaxed">
             <span className="text-[#4ec9b0]">console</span>.
             <span className="text-[#dcdcaa]">log</span>(
@@ -107,7 +107,7 @@ export default function BlogContent() {
           If Arjun’s name changes to Rohit, you would need to update it
           everywhere. That gets messy very quickly. Instead, we use variables:
         </p>
-        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-6 border border-border">
+        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-6 border border-border">
           <code className="font-mono text-sm leading-relaxed">
             <span className="text-[#569cd6]">let</span> name ={" "}
             <span className="text-[#ce9178]">"Arjun"</span>;{"\n"}
@@ -148,7 +148,7 @@ export default function BlogContent() {
           <code>var</code> is the older way of declaring variables in
           JavaScript. It allows you to declare a value and change it later.
         </p>
-        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-6 border border-border">
+        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-6 border border-border">
           <code className="font-mono text-sm leading-relaxed">
             <span className="text-[#569cd6]">var</span> city ={" "}
             <span className="text-[#ce9178]">"Kolkata"</span>;{"\n"}
@@ -172,7 +172,7 @@ export default function BlogContent() {
           when the value might change (for instance, a player's score updating
           during a game).
         </p>
-        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-6 border border-border">
+        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-6 border border-border">
           <code className="font-mono text-sm leading-relaxed">
             <span className="text-[#569cd6]">let</span> score ={" "}
             <span className="text-[#b5cea8]">10</span>;{"\n"}
@@ -196,7 +196,7 @@ export default function BlogContent() {
           something with a permanent marker on the box. Once written, you cannot
           erase it.
         </p>
-        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-6 border border-border">
+        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-6 border border-border">
           <code className="font-mono text-sm leading-relaxed">
             <span className="text-[#569cd6]">const</span> country ={" "}
             <span className="text-[#ce9178]">"India"</span>;{"\n"}
@@ -227,7 +227,7 @@ export default function BlogContent() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-          <div className="p-4 border border-border rounded-lg bg-background-secondary">
+          <div className="p-4 border border-border  -lg bg-background-secondary">
             <h4 className="text-xl font-semibold text-text-primary mb-2">
               String
             </h4>
@@ -235,13 +235,13 @@ export default function BlogContent() {
               A string is simply text. Anything written inside quotes becomes a
               string.
             </p>
-            <code className="block bg-[#1e1e1e] text-[#d4d4d4] p-2 rounded text-sm font-mono">
+            <code className="block bg-[#1e1e1e] text-[#d4d4d4] p-2   text-sm font-mono">
               <span className="text-[#569cd6]">let</span> msg ={" "}
               <span className="text-[#ce9178]">"Hello"</span>;
             </code>
           </div>
 
-          <div className="p-4 border border-border rounded-lg bg-background-secondary">
+          <div className="p-4 border border-border  -lg bg-background-secondary">
             <h4 className="text-xl font-semibold text-text-primary mb-2">
               Number
             </h4>
@@ -249,13 +249,13 @@ export default function BlogContent() {
               JavaScript doesn't separate integers and decimals. Both are
               numbers.
             </p>
-            <code className="block bg-[#1e1e1e] text-[#d4d4d4] p-2 rounded text-sm font-mono">
+            <code className="block bg-[#1e1e1e] text-[#d4d4d4] p-2   text-sm font-mono">
               <span className="text-[#569cd6]">let</span> pi ={" "}
               <span className="text-[#b5cea8]">3.14</span>;
             </code>
           </div>
 
-          <div className="p-4 border border-border rounded-lg bg-background-secondary">
+          <div className="p-4 border border-border  -lg bg-background-secondary">
             <h4 className="text-xl font-semibold text-text-primary mb-2">
               Boolean
             </h4>
@@ -263,13 +263,13 @@ export default function BlogContent() {
               Represents truth values. There are only two possibilities:{" "}
               <code>true</code> or <code>false</code>.
             </p>
-            <code className="block bg-[#1e1e1e] text-[#d4d4d4] p-2 rounded text-sm font-mono">
+            <code className="block bg-[#1e1e1e] text-[#d4d4d4] p-2   text-sm font-mono">
               <span className="text-[#569cd6]">let</span> isRain ={" "}
               <span className="text-[#569cd6]">true</span>;
             </code>
           </div>
 
-          <div className="p-4 border border-border rounded-lg bg-background-secondary">
+          <div className="p-4 border border-border  -lg bg-background-secondary">
             <h4 className="text-xl font-semibold text-text-primary mb-2">
               Null & Undefined
             </h4>
@@ -277,7 +277,7 @@ export default function BlogContent() {
               <code>null</code> is an intentionally empty value.{" "}
               <code>undefined</code> means no value has been set yet.
             </p>
-            <code className="block bg-[#1e1e1e] text-[#d4d4d4] p-2 rounded text-sm font-mono">
+            <code className="block bg-[#1e1e1e] text-[#d4d4d4] p-2   text-sm font-mono">
               <span className="text-[#569cd6]">let</span> a ={" "}
               <span className="text-[#569cd6]">null</span>;
             </code>
@@ -359,7 +359,7 @@ export default function BlogContent() {
           like rooms in a house. If you keep your phone in your bedroom, someone
           in the kitchen cannot magically see it. Variables behave similarly.
         </p>
-        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-6 border border-border">
+        <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-6 border border-border">
           <code className="font-mono text-sm leading-relaxed">
             {"{"}
             {"\n"}
@@ -388,7 +388,7 @@ export default function BlogContent() {
         <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
           Final Thoughts
         </h3>
-        <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4 rounded-r-lg">
+        <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4  -r-lg">
           Variables are one of the most fundamental building blocks in
           programming that allow programs to store information, reuse values,
           and build dynamic behavior. Once you understand variables, the next

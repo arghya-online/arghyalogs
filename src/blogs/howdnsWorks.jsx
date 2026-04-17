@@ -28,7 +28,7 @@ export default function BlogContent() {
             <img
                 src="/blogs/dns-without-mystery/preview.png"
                 alt="DNS Without the Mystery Preview"
-                className="w-full h-auto rounded-lg mb-8"
+                className="w-full h-auto  -lg mb-8"
             />
             <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">DNS Without Guesswork</h2>
 
@@ -206,7 +206,7 @@ export default function BlogContent() {
                 DNS works quietly, which is why it is easy to ignore. dig gives you a way to slow things down and actually see how names become connections.
             </p>
             <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
-                Once this clicks, networking feels less mysterious and debugging feels more grounded.
+                Once this clicks, networking feels less mysterious and debugging feels more g .
             </p>
         </article>
     );

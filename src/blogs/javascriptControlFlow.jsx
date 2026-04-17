@@ -28,7 +28,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Let us start with the most basic decision making structure: the <strong>if statement</strong>. An <code>if</code> statement runs a block of code only if a condition is true. Imagine you are writing a small program for a movie theater that checks if someone is old enough to watch a movie rated 18+. The condition is simple. If the age is 18 or more, the person can enter.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> age = <span className="text-[#b5cea8]">20</span>;{"\n\n"}
                         <span className="text-[#c586c0]">if</span> (age {">="} <span className="text-[#b5cea8]">18</span>) {"{"}{"\n"}
@@ -46,7 +46,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Now imagine a slightly more realistic situation. Suppose you want the program to respond differently if the condition is false. That is where the <strong>if else statement</strong> comes in. The <code>else</code> block runs when the condition inside <code>if</code> is false. Think of a security guard at a club entrance. If you are on the guest list, you can enter. Otherwise you must leave.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> age = <span className="text-[#b5cea8]">16</span>;{"\n\n"}
                         <span className="text-[#c586c0]">if</span> (age {">="} <span className="text-[#b5cea8]">18</span>) {"{"}{"\n"}
@@ -66,7 +66,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Sometimes we need more than two choices. Imagine a grading system in a school. If a student scores above 90, they get grade A. If the score is above 75, they get grade B. If the score is above 50, they get grade C. Otherwise they fail. In such situations we use an <strong>else if ladder</strong>. This allows the program to check multiple conditions one after another.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> marks = <span className="text-[#b5cea8]">78</span>;{"\n\n"}
                         <span className="text-[#c586c0]">if</span> (marks {">"} <span className="text-[#b5cea8]">90</span>) {"{"}{"\n"}
@@ -83,7 +83,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Here is how the code runs step by step. First JavaScript checks whether <code>marks {">"} 90</code>. That is false, so it moves to the next condition. Then it checks <code>marks {">"} 75</code>. That is true, so it prints "Grade B". Once a condition becomes true, the rest of the ladder is ignored. The program stops checking further conditions. This structure is extremely common because many real world situations involve multiple possibilities. Let us try a small program that checks whether a number is positive, negative, or zero. This situation involves logical conditions, so <code>if else</code> is the best choice.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> number = <span className="text-[#b5cea8]">-5</span>;{"\n\n"}
                         <span className="text-[#c586c0]">if</span> (number {">"} <span className="text-[#b5cea8]">0</span>) {"{"}{"\n"}
@@ -105,7 +105,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Another control structure used in JavaScript is the <strong>switch statement</strong>. A switch statement is useful when you want to compare a single value against many possible cases. Imagine a program that prints the day of the week based on a number. Instead of writing many if else conditions, switch makes the code cleaner.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> day = <span className="text-[#b5cea8]">3</span>;{"\n\n"}
                         <span className="text-[#c586c0]">switch</span> (day) {"{"}{"\n"}
@@ -144,7 +144,7 @@ export default function BlogContent() {
             </section>
 
             <section>
-                <p className="mb-6 mt-8 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4 rounded-r-lg">
+                <p className="mb-6 mt-8 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4  -r-lg">
                     Control flow is one of the most important concepts in programming because it allows programs to behave intelligently. Instead of blindly executing instructions, the program observes conditions and chooses actions accordingly. Whether it is checking user input, validating login credentials, or deciding which message to display, control flow structures guide the path of execution. Once you become comfortable with <code>if</code>, <code>else</code>, <code>else if</code>, and <code>switch</code>, you gain the ability to make your programs react to different situations, which is the foundation of real software behavior.
                 </p>
             </section>

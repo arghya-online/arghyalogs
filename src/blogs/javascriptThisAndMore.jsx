@@ -31,7 +31,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     According to the ECMAScript specification, <code>this</code> is a special identifier whose value is determined at runtime. It is part of the <strong>execution context</strong> created when a function runs. This behavior is defined in the ECMAScript language specification, which JavaScript engines follow. Let us begin with the simplest example.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">function</span> <span className="text-[#dcdcaa]">showContext</span>() {"{"}{"\n"}
                         {"  "}<span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(<span className="text-[#569cd6]">this</span>);{"\n"}
@@ -42,7 +42,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     When a function like this is called normally in a browser environment, <code>this</code> usually refers to the <strong>global object</strong> (which is <code>window</code> in browsers). In strict mode (<code>"use strict"</code>), the value of <code>this</code> becomes <code>undefined</code> in such cases. The important idea here is that the function was <strong>not called by any object</strong>, so there is no specific owner. Now let us see what happens when the same idea is used inside an object.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> user = {"{"}{"\n"}
                         {"  "}name: <span className="text-[#ce9178]">"Arjun"</span>,{"\n"}
@@ -70,7 +70,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     The <code>call()</code> method is available on every JavaScript function. It allows us to <strong>explicitly specify the value of `this`</strong> when invoking a function. The syntax looks like this: <code>functionName.call(thisArg, arg1, arg2, ...);</code>. The first argument defines what <code>this</code> should refer to inside the function. Any additional arguments are passed normally to the function. Let us see a simple example.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> person1 = {"{"}{"\n"}
                         {"  "}name: <span className="text-[#ce9178]">"Riya"</span>{"\n"}
@@ -95,7 +95,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     The <code>apply()</code> method works almost exactly like <code>call()</code>. It also allows us to set the value of <code>this</code>. The main difference is <strong>how arguments are passed</strong>. With <code>call()</code>, arguments are passed individually. With <code>apply()</code>, arguments are passed as an <strong>array</strong>.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#dcdcaa]">introduce</span>.<span className="text-[#dcdcaa]">apply</span>(person1, [<span className="text-[#ce9178]">"Mumbai"</span>]);{"\n"}
                         <span className="text-[#dcdcaa]">introduce</span>.<span className="text-[#dcdcaa]">apply</span>(person2, [<span className="text-[#ce9178]">"Bangalore"</span>]);
@@ -104,7 +104,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     The function behavior remains the same. The only difference is the format of the arguments. Historically, <code>apply()</code> was often used when developers already had arguments stored inside an array. However, with the introduction of the <strong>spread operator (<code>...</code>) in ES6</strong>, many use cases of <code>apply()</code> became simpler.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> numbers = [<span className="text-[#b5cea8]">4</span>, <span className="text-[#b5cea8]">8</span>, <span className="text-[#b5cea8]">2</span>];{"\n\n"}
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(<span className="text-[#4ec9b0]">Math</span>.<span className="text-[#dcdcaa]">max</span>(...numbers));
@@ -120,7 +120,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     The third important method is <code>bind()</code>. Unlike <code>call()</code> and <code>apply()</code>, <code>bind()</code> does <strong>not execute the function immediately</strong>. Instead, it returns a <strong>new function with a fixed value of `this`</strong>.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> user = {"{"}{"\n"}
                         {"  "}name: <span className="text-[#ce9178]">"Ananya"</span>{"\n"}
@@ -181,7 +181,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Modern JavaScript introduced <strong>arrow functions</strong> in ECMAScript 2015 (ES6). Arrow functions handle <code>this</code> differently compared to regular functions. Instead of creating their own <code>this</code>, arrow functions inherit <code>this</code> from the surrounding scope. This behavior is called <strong>lexical binding</strong>.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> user = {"{"}{"\n"}
                         {"  "}name: <span className="text-[#ce9178]">"Aman"</span>,{"\n"}
@@ -205,7 +205,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Let us practice the concepts using a small example. Borrow the method using <code>call()</code>, use <code>apply()</code> with an array, and create a bound function.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> student = {"{"}{"\n"}
                         {"  "}name: <span className="text-[#ce9178]">"Neha"</span>,{"\n"}
@@ -225,7 +225,7 @@ export default function BlogContent() {
                         <span className="text-[#dcdcaa]">introFunc</span>();
                     </code>
                 </pre>
-                <p className="mb-6 mt-8 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4 rounded-r-lg">
+                <p className="mb-6 mt-8 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4  -r-lg">
                     The keyword <code>this</code> plays a central role in how JavaScript functions interact with objects. While it may appear confusing at first, the concept becomes clearer once you understand that <code>this</code> depends on the <strong>calling context</strong> of a function. Methods like <code>call()</code>, <code>apply()</code>, and <code>bind()</code> provide powerful ways to control that context. These tools allow developers to reuse functions across objects, manage execution environments, and write more flexible code. As JavaScript evolved through newer ECMAScript versions such as ES6 and beyond, additional features like arrow functions and spread syntax made working with <code>this</code> even more expressive. Understanding these mechanisms not only helps in writing cleaner code but also prepares developers to work with modern frameworks and libraries where these concepts appear frequently.
                 </p>
             </section>

@@ -102,7 +102,7 @@ export default function BlogContent() {
                         <img
                             src="/blogs/tcp-udp-http/tcp-vs-udp.png"
                             alt="TCP vs UDP Diagram"
-                            className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2"
+                            className="w-full h-auto  -lg border border-border bg-background-secondary p-2"
                         />
                         <p className="text-sm text-text-secondary text-center mt-2 italic">
                             Reliability vs Speed
@@ -198,7 +198,7 @@ export default function BlogContent() {
                         <img
                             src="/blogs/tcp-udp-http/http-request-response.png"
                             alt="HTTP Request Response Diagram"
-                            className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2"
+                            className="w-full h-auto  -lg border border-border bg-background-secondary p-2"
                         />
                         <p className="text-sm text-text-secondary text-center mt-2 italic">
                             Request & Response
@@ -311,7 +311,7 @@ export default function BlogContent() {
                         <img
                             src="/blogs/tcp-udp-http/protocol-stack.png"
                             alt="Protocol Stack Diagram"
-                            className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2"
+                            className="w-full h-auto  -lg border border-border bg-background-secondary p-2"
                         />
                         <p className="text-sm text-text-secondary text-center mt-2 italic">
                             The Protocol Stack
@@ -376,7 +376,7 @@ export default function BlogContent() {
                         <img
                             src="/blogs/tcp-udp-http/real-world-logistics.png"
                             alt="Real World Cloud Examples"
-                            className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2"
+                            className="w-full h-auto  -lg border border-border bg-background-secondary p-2"
                         />
                         <p className="text-sm text-text-secondary text-center mt-2 italic">
                             Protocols in Action

@@ -63,7 +63,7 @@ export default function BlogContent() {
                         <img
                             src="/blogs/internet-path/gateway-modem.png"
                             alt="Modem vs Cloud Gateway Diagram"
-                            className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2"
+                            className="w-full h-auto  -lg border border-border bg-background-secondary p-2"
                         />
                         <p className="text-sm text-text-secondary text-center mt-2 italic">
                             Modem vs Cloud Gateway
@@ -98,7 +98,7 @@ export default function BlogContent() {
                         <img
                             src="/blogs/internet-path/routing-flow.png"
                             alt="Routing Flow Diagram"
-                            className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2"
+                            className="w-full h-auto  -lg border border-border bg-background-secondary p-2"
                         />
                         <p className="text-sm text-text-secondary text-center mt-2 italic">
                             Routing Decision Flow
@@ -179,7 +179,7 @@ export default function BlogContent() {
                         <img
                             src="/blogs/internet-path/load-balancer.png"
                             alt="Load Balancer Diagram"
-                            className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2"
+                            className="w-full h-auto  -lg border border-border bg-background-secondary p-2"
                         />
                         <p className="text-sm text-text-secondary text-center mt-2 italic">
                             Traffic Distribution

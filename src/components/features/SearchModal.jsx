@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { Search, X } from "lucide-react";
+import { Search, X, Layers, Code, Play } from "lucide-react";
 import { getAllBlogs } from "@/lib/blogs";
+import { projects } from "@/data/projects";
+import { youtubeVideos } from "@/data/youtube";
 import gsap from "gsap";
 
 export default function SearchModal({ isOpen, onClose }) {
@@ -11,18 +13,52 @@ export default function SearchModal({ isOpen, onClose }) {
     const navigate = useNavigate();
     const inputRef = useRef(null);
 
-
     useEffect(() => {
         if (!query) {
             setResults([]);
             return;
         }
-        const allBlogs = getAllBlogs();
-        const filtered = allBlogs.filter((blog) =>
-            blog.title.toLowerCase().includes(query.toLowerCase()) ||
-            blog.summary.toLowerCase().includes(query.toLowerCase()) ||
-            blog.category.toLowerCase().includes(query.toLowerCase())
+
+        const q = query.toLowerCase();
+
+        // 1. Map Blogs
+        const mappedBlogs = getAllBlogs().map(b => ({
+            id: b.slug,
+            title: b.title,
+            summary: b.summary,
+            type: "blog",
+            label: b.category,
+            path: `/${b.category.toLowerCase()}/${b.slug}`
+        }));
+
+        // 2. Map Projects
+        const mappedProjects = projects.map(p => ({
+            id: p.slug,
+            title: p.title,
+            summary: p.description,
+            type: "project",
+            label: "Project",
+            path: `/projects/${p.slug}`
+        }));
+
+        // 3. Map YouTube
+        const mappedVideos = youtubeVideos.map(v => ({
+            id: v.slug,
+            title: v.title,
+            summary: v.description,
+            type: "youtube",
+            label: "YouTube",
+            href: v.link
+        }));
+
+        const unifiedIndex = [...mappedBlogs, ...mappedProjects, ...mappedVideos];
+
+        const filtered = unifiedIndex.filter((item) =>
+            item.title.toLowerCase().includes(q) ||
+            item.summary?.toLowerCase().includes(q) ||
+            item.label?.toLowerCase().includes(q)
         );
+
         setResults(filtered);
     }, [query]);
 
@@ -52,11 +88,21 @@ export default function SearchModal({ isOpen, onClose }) {
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [isOpen, onClose]);
 
-    const handleSelect = (category, slug) => {
-        navigate(`/${category.toLowerCase()}/${slug}`);
+    const handleSelect = (item) => {
+        if (item.href) {
+            window.open(item.href, '_blank');
+        } else {
+            navigate(item.path);
+        }
         onClose();
         setQuery("");
     };
+
+    const getIconForType = (type) => {
+        if (type === "project") return <Code className="w-3.5 h-3.5 text-accent" />;
+        if (type === "youtube") return <Play className="w-3.5 h-3.5 text-red-500" />;
+        return <Layers className="w-3.5 h-3.5 text-accent/70" />;
+    }
 
     return (
         <div
@@ -65,7 +111,7 @@ export default function SearchModal({ isOpen, onClose }) {
             onClick={onClose}
         >
             <div
-                className="bg-background w-full max-w-xl rounded-lg border border-border shadow-2xl overflow-hidden"
+                className="bg-background w-full max-w-2xl border border-border mt-4 sm:mt-10 overflow-hidden shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="flex items-center border-b border-border px-4 py-3 gap-3">
@@ -73,12 +119,12 @@ export default function SearchModal({ isOpen, onClose }) {
                     <input
                         ref={inputRef}
                         type="text"
-                        className="flex-1 bg-transparent border-none outline-none text-lg text-text-primary placeholder:text-text-secondary"
-                        placeholder="Search posts..."
+                        className="flex-1 bg-transparent border-none outline-none text-base sm:text-lg text-text-primary placeholder:text-text-secondary"
+                        placeholder="Search blogs, projects, videos..."
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                     />
-                    <button onClick={onClose} className="p-1 hover:bg-surface rounded text-text-secondary">
+                    <button onClick={onClose} className="p-1 hover:bg-surface text-text-secondary transition-colors">
                         <X className="h-5 w-5" />
                     </button>
                 </div>
@@ -86,7 +132,7 @@ export default function SearchModal({ isOpen, onClose }) {
                 <div className="max-h-[60vh] overflow-y-auto p-2">
                     {query === "" && (
                         <div className="p-8 text-center text-text-secondary text-sm">
-                            Type to search by title, summary, or category.
+                            What are you looking for? (Try "robot", "react", or "weather")
                         </div>
                     )}
 
@@ -98,20 +144,21 @@ export default function SearchModal({ isOpen, onClose }) {
 
                     {results.length > 0 && (
                         <ul className="space-y-1">
-                            {results.map((blog) => (
-                                <li key={blog.slug}>
+                            {results.map((item) => (
+                                <li key={item.id + item.type}>
                                     <button
-                                        onClick={() => handleSelect(blog.category, blog.slug)}
-                                        className="w-full text-left p-3 rounded hover:bg-surface transition-colors flex flex-col gap-1 group"
+                                        onClick={() => handleSelect(item)}
+                                        className="w-full text-left p-3 hover:bg-surface transition-colors flex flex-col gap-1 group border border-transparent hover:border-border"
                                     >
-                                        <span className="font-medium text-text-primary group-hover:text-accent">
-                                            {blog.title}
-                                        </span>
-                                        <div className="flex items-center gap-2 text-xs text-text-secondary">
-                                            <span className="capitalize text-accent/70">{blog.category}</span>
-                                            <span>•</span>
-                                            <span>{blog.date}</span>
+                                        <div className="flex items-center gap-2">
+                                            {getIconForType(item.type)}
+                                            <span className="font-medium text-text-primary group-hover:text-text-primary transition-colors">
+                                                {item.title}
+                                            </span>
                                         </div>
+                                        <p className="text-xs text-text-secondary line-clamp-1 ml-5">
+                                            {item.summary}
+                                        </p>
                                     </button>
                                 </li>
                             ))}
@@ -120,7 +167,7 @@ export default function SearchModal({ isOpen, onClose }) {
                 </div>
 
                 <div className="px-4 py-2 border-t border-border bg-surface/50 text-xs text-text-secondary flex justify-between">
-                    <span>Press <kbd className="font-mono bg-background px-1 rounded border border-border">ESC</kbd> to close</span>
+                    <span>Press <kbd className="font-mono bg-background px-1   border border-border">ESC</kbd> to close</span>
                     <span>{results.length} results</span>
                 </div>
             </div>

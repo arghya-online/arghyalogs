@@ -24,7 +24,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Before looking at arrow functions, let us quickly see how a <strong>normal function</strong> looks. Suppose we want a function that adds two numbers.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">function</span> <span className="text-[#dcdcaa]">add</span>(a, b) {"{"}{"\n"}
                         {"  "}<span className="text-[#c586c0]">return</span> a + b;{"\n"}
@@ -35,7 +35,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     This works perfectly and has been used in JavaScript for years. But notice that we have to write the <code>function</code> keyword, give the function a name, write parentheses, and then write a return statement. For small operations this can feel slightly heavy. Arrow functions provide a more modern and concise way to do the same thing. Here is the same example written using an <strong>arrow function</strong>.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> <span className="text-[#dcdcaa]">add</span> = (a, b) {"=>"} {"{"}{"\n"}
                         {"  "}<span className="text-[#c586c0]">return</span> a + b;{"\n"}
@@ -53,7 +53,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Now let us understand the <strong>basic arrow function syntax</strong> step by step. You define the function using a variable, write the parameters inside parentheses, and then use the arrow symbol followed by the function body. The general structure looks like this: <code><span className="text-[#569cd6]">const</span> functionName = (parameters) {"=>"} {"{"} <span className="text-[#6a9955]">// code</span> {"}"};</code> The behavior is exactly the same as a normal function. Arrow functions become even simpler when there is <strong>only one parameter</strong>. In that case, the parentheses are optional.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> <span className="text-[#dcdcaa]">greet</span> = name {"=>"} {"{"}{"\n"}
                         {"  "}<span className="text-[#c586c0]">return</span> <span className="text-[#ce9178]">"Hello "</span> + name;{"\n"}
@@ -64,7 +64,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Here the function takes one parameter called <code>name</code> and returns a greeting message. Because there is only one parameter, we could remove the parentheses around <code>name</code>. Many developers do this because it keeps the code clean and readable. When a function has <strong>multiple parameters</strong>, we must use parentheses. This keeps the parameters clear and organized.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> <span className="text-[#dcdcaa]">multiply</span> = (a, b) {"=>"} {"{"}{"\n"}
                         {"  "}<span className="text-[#c586c0]">return</span> a * b;{"\n"}
@@ -79,7 +79,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Now let us talk about one of the most useful features of arrow functions: <strong>implicit return</strong>. In a normal function we usually write the <code>return</code> keyword. But arrow functions allow us to skip it when the function has only one expression. JavaScript will automatically return the result. For example, this arrow function uses an <strong>explicit return</strong>.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> <span className="text-[#dcdcaa]">square</span> = (num) {"=>"} {"{"}{"\n"}
                         {"  "}<span className="text-[#c586c0]">return</span> num * num;{"\n"}
@@ -90,7 +90,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     But the same function can be written even shorter using <strong>implicit return</strong>. Example:
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> <span className="text-[#dcdcaa]">square</span> = num {"=>"} num * num;{"\n\n"}
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(<span className="text-[#dcdcaa]">square</span>(<span className="text-[#b5cea8]">4</span>)); <span className="text-[#6a9955]">// 16</span>
@@ -99,7 +99,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Here there are no curly braces and no <code>return</code> keyword. JavaScript automatically returns the result of <code>num * num</code>. This makes small utility functions extremely concise. Arrow functions become especially powerful when working with array methods like <code>map()</code>. Suppose you have an array of numbers and you want to double every value.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> numbers = [<span className="text-[#b5cea8]">1</span>, <span className="text-[#b5cea8]">2</span>, <span className="text-[#b5cea8]">3</span>, <span className="text-[#b5cea8]">4</span>];{"\n\n"}
                         <span className="text-[#569cd6]">let</span> doubled = numbers.<span className="text-[#dcdcaa]">map</span>(num {"=>"} num * <span className="text-[#b5cea8]">2</span>);{"\n\n"}
@@ -116,7 +116,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     At this point it is useful to understand the <strong>basic difference between normal functions and arrow functions</strong>. For beginners, the most important difference is simply <strong>syntax and readability</strong>. Arrow functions remove the need for the <code>function</code> keyword and allow shorter expressions. They are especially helpful for small operations like calculations, data transformations, or callbacks inside array methods. Traditional functions are still useful for larger pieces of logic or when defining methods in certain contexts. But for everyday modern JavaScript, arrow functions have become extremely common. Let us try a few small exercises to make this clearer. First, write a normal function that calculates the square of a number.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">function</span> <span className="text-[#dcdcaa]">square</span>(num) {"{"}{"\n"}
                         {"  "}<span className="text-[#c586c0]">return</span> num * num;{"\n"}
@@ -127,7 +127,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Now rewrite the same function using an arrow function.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> <span className="text-[#dcdcaa]">squareArrow</span> = num {"=>"} num * num;{"\n\n"}
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(<span className="text-[#dcdcaa]">squareArrow</span>(<span className="text-[#b5cea8]">5</span>));
@@ -136,7 +136,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Next, create an arrow function that checks whether a number is even or odd, and use map to square a list of numbers. Example:
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> <span className="text-[#dcdcaa]">isEven</span> = num {"=>"} num % <span className="text-[#b5cea8]">2</span> === <span className="text-[#b5cea8]">0</span>;{"\n\n"}
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(<span className="text-[#dcdcaa]">isEven</span>(<span className="text-[#b5cea8]">4</span>)); <span className="text-[#6a9955]">// true</span>{"\n"}
@@ -146,7 +146,7 @@ export default function BlogContent() {
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(squares); <span className="text-[#6a9955]">// [4, 9, 16, 25]</span>
                     </code>
                 </pre>
-                <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4 rounded-r-lg">
+                <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4  -r-lg">
                     The more JavaScript you write, the more you will see arrow functions everywhere. They are widely used in modern frameworks, functional programming patterns, and array operations. The key idea is not that arrow functions change what functions do, but that they <strong>make simple functions easier to write and read</strong>. Once your brain gets used to the arrow syntax, it starts feeling natural, and your code becomes cleaner and more expressive.
                 </p>
             </section>

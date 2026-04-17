@@ -28,7 +28,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Let us start with the most familiar category: <strong>arithmetic operators</strong>. These operators are used for basic mathematical calculations like addition, subtraction, multiplication, and division. If you have ever used a calculator, you already understand these operators.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> a = <span className="text-[#b5cea8]">10</span>;{"\n"}
                         <span className="text-[#569cd6]">let</span> b = <span className="text-[#b5cea8]">5</span>;{"\n\n"}
@@ -41,7 +41,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     If you run this code in the console, you will see the results of each operation. The plus symbol adds numbers, the minus symbol subtracts, the asterisk multiplies, and the slash divides. JavaScript also provides another useful arithmetic operator called <strong>modulus</strong>, represented by <code>%</code>. The modulus operator returns the remainder of a division.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> result = <span className="text-[#b5cea8]">10</span> % <span className="text-[#b5cea8]">3</span>;{"\n\n"}
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(result); <span className="text-[#6a9955]">// 1</span>
@@ -50,7 +50,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     The result will be <code>1</code>, because when 10 is divided by 3, the remainder is 1. This operator is surprisingly useful in programming. For example, developers often use it to check whether a number is even or odd.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> number = <span className="text-[#b5cea8]">8</span>;{"\n\n"}
                         <span className="text-[#c586c0]">if</span> (number % <span className="text-[#b5cea8]">2</span> === <span className="text-[#b5cea8]">0</span>) {"{"}{"\n"}
@@ -67,7 +67,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     The next important category is <strong>comparison operators</strong>. These operators compare two values and return either <code>true</code> or <code>false</code>. The result is always a boolean value, which makes them extremely useful in conditions and decision making. Some common comparison operators are <code>==</code>, <code>===</code>, <code>!=</code>, <code>{">"}</code>, and <code>{"<"}</code>.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(<span className="text-[#b5cea8]">5</span> {">"} <span className="text-[#b5cea8]">3</span>); <span className="text-[#6a9955]">// true</span>{"\n"}
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(<span className="text-[#b5cea8]">2</span> {"<"} <span className="text-[#b5cea8]">1</span>); <span className="text-[#6a9955]">// false</span>
@@ -76,7 +76,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     The first expression evaluates to <code>true</code> because 5 is greater than 3. The second expression evaluates to <code>false</code> because 2 is not less than 1. One of the most important comparisons in JavaScript involves the difference between <strong>double equals (<code>==</code>) and triple equals (<code>===</code>)</strong>. Both are used to check equality, but they behave differently.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(<span className="text-[#b5cea8]">5</span> == <span className="text-[#ce9178]">"5"</span>); <span className="text-[#6a9955]">// true</span>
                     </code>
@@ -84,7 +84,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     This will return <code>true</code>. The reason is that the <code>==</code> operator performs <strong>type conversion</strong> before comparing values. It converts the string <code>"5"</code> into a number and then compares it with 5. Now look at the strict equality operator:
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(<span className="text-[#b5cea8]">5</span> === <span className="text-[#ce9178]">"5"</span>); <span className="text-[#6a9955]">// false</span>
                     </code>
@@ -102,7 +102,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     The <code>&&</code> operator means <strong>AND</strong>. It returns true only if both conditions are true.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> age = <span className="text-[#b5cea8]">20</span>;{"\n"}
                         <span className="text-[#569cd6]">let</span> hasTicket = <span className="text-[#569cd6]">true</span>;{"\n\n"}
@@ -114,7 +114,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Here both conditions must be true. The person must be at least 18 years old and must also have a ticket. If either condition fails, the result becomes false. The <code>||</code> operator means <strong>OR</strong>. It returns true if at least one condition is true.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> isWeekend = <span className="text-[#569cd6]">true</span>;{"\n"}
                         <span className="text-[#569cd6]">let</span> isHoliday = <span className="text-[#569cd6]">false</span>;{"\n\n"}
@@ -126,7 +126,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     In this example the condition becomes true because it is a weekend, even though it is not a holiday. The final logical operator is <code>!</code>, which means <strong>NOT</strong>. It simply reverses a boolean value.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> isLoggedIn = <span className="text-[#569cd6]">false</span>;{"\n\n"}
                         <span className="text-[#c586c0]">if</span> (!isLoggedIn) {"{"}{"\n"}
@@ -141,7 +141,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Another category that appears frequently in JavaScript is <strong>assignment operators</strong>. The basic assignment operator is the equals sign <code>=</code>. It assigns a value to a variable like <code><span className="text-[#569cd6]">let</span> score = <span className="text-[#b5cea8]">10</span>;</code>. But JavaScript also provides shorthand assignment operators that combine arithmetic operations with assignment.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> score = <span className="text-[#b5cea8]">10</span>;{"\n"}
                         score += <span className="text-[#b5cea8]">5</span>;{"\n"}
@@ -161,7 +161,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     To practice these ideas, try a small exercise. First create two numbers and perform basic arithmetic operations on them.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> x = <span className="text-[#b5cea8]">12</span>;{"\n"}
                         <span className="text-[#569cd6]">let</span> y = <span className="text-[#b5cea8]">4</span>;{"\n\n"}
@@ -180,7 +180,7 @@ export default function BlogContent() {
                         {"}"}
                     </code>
                 </pre>
-                <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4 rounded-r-lg">
+                <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4  -r-lg">
                     Operators may seem like small symbols, but they play a huge role in programming. They allow JavaScript to perform calculations, evaluate conditions, and control how programs behave. Once you understand arithmetic, comparison, logical, and assignment operators, you gain the basic tools needed to build real program logic. These operators appear everywhere in JavaScript code, so becoming comfortable with them is an important step toward writing clear and effective programs.
                 </p>
             </section>

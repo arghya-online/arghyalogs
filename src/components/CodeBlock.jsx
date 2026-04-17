@@ -93,7 +93,7 @@ export function CodeBlock({ code, language = 'html' }) {
     };
 
     return (
-        <div className="my-6 overflow-hidden rounded-xl border border-zinc-800 bg-[#0d1117]">
+        <div className="my-6 overflow-hidden  -xl border border-zinc-800 bg-[#0d1117]">
             {/* Header Bar */}
             <div className="flex items-center justify-between px-4 py-2 border-b border-zinc-800 bg-[#0d1117] text-zinc-400">
                 <span className="text-xs font-mono uppercase tracking-wider select-none">{language}</span>

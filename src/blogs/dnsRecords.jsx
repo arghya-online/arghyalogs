@@ -16,7 +16,7 @@ export default function BlogContent() {
             <img
                 src="/blogs/dns-record-types/preview.png"
                 alt="DNS Records Preview"
-                className="w-full h-auto rounded-lg mb-8"
+                className="w-full h-auto  -lg mb-8"
             />
             <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
                 DNS Record Types Explained

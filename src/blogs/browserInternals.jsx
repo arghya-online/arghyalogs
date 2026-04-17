@@ -19,7 +19,7 @@ export default function BlogContent() {
             <img
                 src="/blogs/browserInternal/preview.png"
                 alt="Browser Flow"
-                className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2 my-6"
+                className="w-full h-auto  -lg border border-border bg-background-secondary p-2 my-6"
             />
             <section>
                 <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">
@@ -72,7 +72,7 @@ export default function BlogContent() {
                 <img
                     src="/blogs/browserInternal/browserFlow.png"
                     alt="Browser Flow"
-                    className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2 my-6"
+                    className="w-full h-auto  -lg border border-border bg-background-secondary p-2 my-6"
                 />
             </section>
 
@@ -162,7 +162,7 @@ export default function BlogContent() {
                 <img
                     src="/blogs/browserInternal/browserEngine.png"
                     alt="Browser Engine"
-                    className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2 my-6"
+                    className="w-full h-auto  -lg border border-border bg-background-secondary p-2 my-6"
                 />
             </section>
 
@@ -208,7 +208,7 @@ export default function BlogContent() {
                 <img
                     src="/blogs/browserInternal/DOM.png"
                     alt="DOM Structure"
-                    className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2 my-6"
+                    className="w-full h-auto  -lg border border-border bg-background-secondary p-2 my-6"
                 />
             </section>
 
@@ -289,7 +289,7 @@ export default function BlogContent() {
                 <img
                     src="/blogs/browserInternal/jsInsideBrowser.png"
                     alt="JS Inside Browser"
-                    className="w-full h-auto rounded-lg border border-border bg-background-secondary p-2 my-6"
+                    className="w-full h-auto  -lg border border-border bg-background-secondary p-2 my-6"
                 />
             </section>
 

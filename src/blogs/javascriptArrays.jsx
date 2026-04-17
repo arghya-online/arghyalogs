@@ -28,7 +28,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Let us start with two of the simplest ones: <strong>push() and pop()</strong>. Think of a stack of plates in a restaurant kitchen. When a new plate is cleaned, it gets placed on top of the stack. That is exactly what <code>push()</code> does. It adds a new item to the end of an array. For example imagine a list of orders in a café.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> orders = [<span className="text-[#ce9178]">"coffee"</span>, <span className="text-[#ce9178]">"sandwich"</span>];{"\n\n"}
                         orders.<span className="text-[#dcdcaa]">push</span>(<span className="text-[#ce9178]">"cake"</span>);{"\n\n"}
@@ -38,7 +38,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Before push it was <code>["coffee", "sandwich"]</code> and after push it becomes <code>["coffee", "sandwich", "cake"]</code>. Now imagine the last customer suddenly cancels the cake order. Instead of manually removing it, we use <code>pop()</code>. This removes the <strong>last item</strong> from the array.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         orders.<span className="text-[#dcdcaa]">pop</span>();{"\n\n"}
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(orders);
@@ -54,7 +54,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Now let us move to the opposite direction with <strong>shift() and unshift()</strong>. Instead of working at the end of the array, these methods work at the <strong>beginning</strong>. Imagine a queue at a movie theater. The person standing at the very front gets the ticket first. If that person leaves the line, the next person moves forward. That is what <code>shift()</code> does. It removes the <strong>first item</strong> of an array.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> queue = [<span className="text-[#ce9178]">"Rahul"</span>, <span className="text-[#ce9178]">"Amit"</span>, <span className="text-[#ce9178]">"Sana"</span>];{"\n\n"}
                         queue.<span className="text-[#dcdcaa]">shift</span>();{"\n\n"}
@@ -64,7 +64,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Before shift it was <code>["Rahul", "Amit", "Sana"]</code> and after shift it becomes <code>["Amit", "Sana"]</code>. Now suppose a VIP guest arrives and goes directly to the front of the line. That is what <code>unshift()</code> does. It adds an item at the <strong>beginning</strong> of the array.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         queue.<span className="text-[#dcdcaa]">unshift</span>(<span className="text-[#ce9178]">"VIP"</span>);{"\n\n"}
                         <span className="text-[#4ec9b0]">console</span>.<span className="text-[#dcdcaa]">log</span>(queue);
@@ -80,7 +80,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Once you are comfortable with these, the real magic of JavaScript arrays begins with methods like <strong>map()</strong>. Imagine you are a teacher checking exam marks. You have a list of scores and the school suddenly decides to give everyone <strong>double marks</strong> as bonus. You could loop through the array manually, but <code>map()</code> makes this much cleaner. The idea of map is simple: it <strong>creates a new array by transforming each element</strong>.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> marks = [<span className="text-[#b5cea8]">10</span>, <span className="text-[#b5cea8]">20</span>, <span className="text-[#b5cea8]">30</span>];{"\n\n"}
                         <span className="text-[#569cd6]">let</span> doubledMarks = marks.<span className="text-[#dcdcaa]">map</span>(<span className="text-[#569cd6]">function</span>(mark) {"{"}{"\n"}
@@ -92,7 +92,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     The original array was <code>[10, 20, 30]</code> and after map it becomes <code>[20, 40, 60]</code>. What happened here is that JavaScript looked at each element, applied the function, and created a new array with the results. Compare this with a traditional for loop:
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> numbers = [<span className="text-[#b5cea8]">1</span>, <span className="text-[#b5cea8]">2</span>, <span className="text-[#b5cea8]">3</span>];{"\n"}
                         <span className="text-[#569cd6]">let</span> result = [];{"\n\n"}
@@ -112,7 +112,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Next comes <strong>filter()</strong>, which is extremely useful in real applications. Imagine you run an online store and you want to see only products that cost more than 1000 rupees. Instead of manually checking each item, <code>filter()</code> automatically selects the ones that match a condition.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> prices = [<span className="text-[#b5cea8]">200</span>, <span className="text-[#b5cea8]">1200</span>, <span className="text-[#b5cea8]">450</span>, <span className="text-[#b5cea8]">3000</span>, <span className="text-[#b5cea8]">800</span>];{"\n\n"}
                         <span className="text-[#569cd6]">let</span> expensive = prices.<span className="text-[#dcdcaa]">filter</span>(<span className="text-[#569cd6]">function</span>(price) {"{"}{"\n"}
@@ -124,7 +124,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     From original array <code>[200, 1200, 450, 3000, 800]</code>, the filtered result is <code>[1200, 3000]</code>. So <code>filter()</code> simply <strong>keeps the values that satisfy the condition</strong> and removes the rest. Another very common method is <strong>forEach()</strong>. Think of it as telling JavaScript to do something <strong>for every item in the array</strong>. Imagine you have a list of students and you want to greet each one.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> students = [<span className="text-[#ce9178]">"Aman"</span>, <span className="text-[#ce9178]">"Riya"</span>, <span className="text-[#ce9178]">"Kabir"</span>];{"\n\n"}
                         students.<span className="text-[#dcdcaa]">forEach</span>(<span className="text-[#569cd6]">function</span>(student) {"{"}{"\n"}
@@ -142,7 +142,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Finally we come to <strong>reduce()</strong>, which sounds scary but the idea is actually simple. Reduce is used when we want to <strong>combine all elements of an array into a single value</strong>. Imagine you have a list of expenses and you want the total.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> expenses = [<span className="text-[#b5cea8]">100</span>, <span className="text-[#b5cea8]">200</span>, <span className="text-[#b5cea8]">300</span>];{"\n\n"}
                         <span className="text-[#569cd6]">let</span> total = expenses.<span className="text-[#dcdcaa]">reduce</span>(<span className="text-[#569cd6]">function</span>(sum, value) {"{"}{"\n"}
@@ -161,7 +161,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     To practice these methods, try a small assignment. Create an array of numbers and perform some operations on it.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">let</span> numbers = [<span className="text-[#b5cea8]">5</span>, <span className="text-[#b5cea8]">8</span>, <span className="text-[#b5cea8]">12</span>, <span className="text-[#b5cea8]">20</span>];{"\n\n"}
                         <span className="text-[#6a9955]">// map() to double each number</span>{"\n"}
@@ -175,7 +175,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Try running these examples directly in the browser console. The best way to understand array methods is simply experimenting with them.
                 </p>
-                <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4 rounded-r-lg">
+                <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4  -r-lg">
                     Arrays are one of the most powerful parts of JavaScript, and these methods make working with them much easier. Instead of writing long loops and complicated logic, you can transform, filter, and process data with simple readable code. Once these methods become natural to you, writing JavaScript starts feeling much smoother and more expressive.
                 </p>
             </section>

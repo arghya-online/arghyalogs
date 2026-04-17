@@ -12,7 +12,7 @@ export function CopyButton({ code, className = "" }) {
     return (
         <button
             onClick={handleCopy}
-            className={`flex items-center gap-2 text-xs px-2 py-1.5 rounded-md 
+            className={`flex items-center gap-2 text-xs px-2 py-1.5  -md 
                  text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition \${className}`}
         >
             {copied ? (

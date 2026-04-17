@@ -1,7 +1,8 @@
 export const skills = {
-    languages: ["HTML5", "CSS3", "JavaScript ES6+", "C++"],
+    core: ["JavaScript", "HTML5", "CSS3", "C++"],
     frameworks: ["React", "Node.js", "Express.js", "Tailwind CSS", "Framer Motion", "GSAP"],
-    tools: ["Git", "GitHub", "Arduino", "Vercel", "Netlify", "Appwrite"]
+    databases: ["MongoDB", "Supabase", "Firebase", "Appwrite"],
+    tools: ["Git", "GitHub", "Docker", "Vercel", "Netlify"]
 };
 
 export const projects = [

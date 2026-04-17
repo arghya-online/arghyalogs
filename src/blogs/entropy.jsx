@@ -62,7 +62,7 @@ export default function BlogContent() {
                     This is why the Second Law of Thermodynamics is depressing but inescapable:
                 </p>
 
-                <div className="bg-background-secondary border border-border rounded-lg p-4 mb-6 text-base sm:text-lg font-mono">
+                <div className="bg-background-secondary border border-border  -lg p-4 mb-6 text-base sm:text-lg font-mono">
                     ΔS<sub>universe</sub> &ge; 0
                 </div>
 
@@ -96,7 +96,7 @@ export default function BlogContent() {
                     To extract work from heat, you need a temperature <em>difference</em>. You need heat to flow from a high-temperature source to a low-temperature sink. The efficiency of this process is limited by the Carnot Efficiency:
                 </p>
 
-                <div className="bg-background-secondary border border-border rounded-lg p-4 mb-6 text-base sm:text-lg font-mono">
+                <div className="bg-background-secondary border border-border  -lg p-4 mb-6 text-base sm:text-lg font-mono">
                     &eta; = 1 - (T<sub>cold</sub> / T<sub>hot</sub>)
                 </div>
 
@@ -122,7 +122,7 @@ export default function BlogContent() {
                     He wrote down what is now known as the Clausius Inequality:
                 </p>
 
-                <div className="bg-background-secondary border border-border rounded-lg p-4 mb-6 text-base sm:text-lg font-mono">
+                <div className="bg-background-secondary border border-border  -lg p-4 mb-6 text-base sm:text-lg font-mono">
                     ∮ (&delta;Q / T) &le; 0
                 </div>
 
@@ -144,7 +144,7 @@ export default function BlogContent() {
                     He named this property <strong>Entropy</strong> (symbol S).
                 </p>
 
-                <div className="bg-background-secondary border border-border rounded-lg p-4 mb-6 text-base sm:text-lg font-mono">
+                <div className="bg-background-secondary border border-border  -lg p-4 mb-6 text-base sm:text-lg font-mono">
                     dS = (&delta;Q / T)<sub>int rev</sub>
                 </div>
 
@@ -174,7 +174,7 @@ export default function BlogContent() {
                     By mashing up the First Law and the definition of Entropy, we get:
                 </p>
 
-                <div className="bg-background-secondary border border-border rounded-lg p-4 mb-6 text-base sm:text-lg font-mono grid gap-2">
+                <div className="bg-background-secondary border border-border  -lg p-4 mb-6 text-base sm:text-lg font-mono grid gap-2">
                     <p>1. T ds = du + P dv</p>
                     <p>2. T ds = dh - v dP</p>
                 </div>
@@ -187,7 +187,7 @@ export default function BlogContent() {
                     For an ideal (isentropic) machine, we assume entropy doesn't change (<code>ds = 0</code>). The equation simplifies to:
                 </p>
 
-                <div className="bg-background-secondary border border-border rounded-lg p-4 mb-6 text-base sm:text-lg font-mono">
+                <div className="bg-background-secondary border border-border  -lg p-4 mb-6 text-base sm:text-lg font-mono">
                     dh = v dP
                 </div>
 
@@ -209,7 +209,7 @@ export default function BlogContent() {
                     Ludwig Boltzmann gave us the answer in the late 1800s. He realized that entropy is really a numbers game.
                 </p>
 
-                <div className="bg-background-secondary border border-border rounded-lg p-4 mb-6 text-base sm:text-lg font-mono">
+                <div className="bg-background-secondary border border-border  -lg p-4 mb-6 text-base sm:text-lg font-mono">
                     S = k ln(&Omega;)
                 </div>
 
@@ -259,7 +259,7 @@ export default function BlogContent() {
                     We define <strong>Isentropic Efficiency</strong> (&eta;) to quantify this disappointment:
                 </p>
 
-                <div className="bg-background-secondary border border-border rounded-lg p-4 mb-6 text-base sm:text-lg font-mono">
+                <div className="bg-background-secondary border border-border  -lg p-4 mb-6 text-base sm:text-lg font-mono">
                     &eta;<sub>turbine</sub> = Actual Work / Isentropic Work = 85 / 100 = 85%
                 </div>
 
@@ -281,7 +281,7 @@ export default function BlogContent() {
                     There is a direct link between generating entropy and destroying exergy:
                 </p>
 
-                <div className="bg-background-secondary border border-border rounded-lg p-4 mb-6 text-base sm:text-lg font-mono">
+                <div className="bg-background-secondary border border-border  -lg p-4 mb-6 text-base sm:text-lg font-mono">
                     X<sub>destroyed</sub> = T<sub>0</sub> &sdot; S<sub>gen</sub>
                 </div>
 

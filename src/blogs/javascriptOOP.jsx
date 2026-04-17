@@ -34,7 +34,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     A class in JavaScript is a template for creating objects. It encapsulates data (properties) and functions (methods) that operate on that data into a single, cohesive unit. This approach significantly improves code readability and reusability. Instead of writing separate variables and functions for every entity, a class defines the structure once.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">class</span> <span className="text-[#4ec9b0]">Car</span> {"{"}{"\n"}
                         {"  "}<span className="text-[#569cd6]">constructor</span>(make, model, color) {"{"}{"\n"}
@@ -65,7 +65,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     With the class defined, we can now manufacture individual car objects. This process is called <strong>instantiation</strong>, and it relies on the <code>new</code> keyword.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">const</span> myCar = <span className="text-[#569cd6]">new</span> <span className="text-[#4ec9b0]">Car</span>(<span className="text-[#ce9178]">"Toyota"</span>, <span className="text-[#ce9178]">"Corolla"</span>, <span className="text-[#ce9178]">"Silver"</span>);{"\n"}
                         <span className="text-[#569cd6]">const</span> friendCar = <span className="text-[#569cd6]">new</span> <span className="text-[#4ec9b0]">Car</span>(<span className="text-[#ce9178]">"Honda"</span>, <span className="text-[#ce9178]">"Civic"</span>, <span className="text-[#ce9178]">"Black"</span>);{"\n\n"}
@@ -83,7 +83,7 @@ export default function BlogContent() {
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Classes also contain <strong>methods</strong>, which are functions that define the behavior of the objects. These methods can perform actions using the specific data stored within the object they belong to.
                 </p>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         myCar.<span className="text-[#dcdcaa]">startEngine</span>();{"\n"}
                         <span className="text-[#6a9955]">// Output: The Silver Toyota engine is running.</span>{"\n\n"}
@@ -114,7 +114,7 @@ export default function BlogContent() {
                     <li>Add a method that prints the student's details.</li>
                     <li>Instantiate multiple student objects and call the detail method on each.</li>
                 </ul>
-                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-lg overflow-x-auto mb-4 border border-border">
+                <pre className="bg-[#1e1e1e] text-[#d4d4d4] p-4  -lg overflow-x-auto mb-4 border border-border">
                     <code className="font-mono text-sm leading-relaxed">
                         <span className="text-[#569cd6]">class</span> <span className="text-[#4ec9b0]">Student</span> {"{"}{"\n"}
                         {"  "}<span className="text-[#569cd6]">constructor</span>(name, age) {"{"}{"\n"}
@@ -131,7 +131,7 @@ export default function BlogContent() {
                         student2.<span className="text-[#dcdcaa]">displayDetails</span>();
                     </code>
                 </pre>
-                <p className="mb-6 mt-8 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4 rounded-r-lg">
+                <p className="mb-6 mt-8 text-base sm:text-lg leading-relaxed text-text-secondary border-l-4 border-accent pl-4 italic bg-background-secondary p-4  -r-lg">
                     Object-Oriented Programming transforms code from a scattered collection of functions and variables into a structured, real-world reflection of interacting entities. Classes act as robust blueprints, establishing standard properties and reusable methods, while objects serve as the individual, customizable instances running within the application. Understanding how to construct and deploy these encapsulated structures is a pivotal step toward writing clean, scalable JavaScript.
                 </p>
             </section>

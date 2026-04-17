@@ -96,7 +96,7 @@ export default function LoadingScreen({ onComplete }) {
                     ))}
                 </h1>
 
-                <div className="w-64 h-1 bg-neutral-800 mt-12 rounded-full overflow-hidden">
+                <div className="w-64 h-1 bg-neutral-800 mt-12  -full overflow-hidden">
                     <div
                         ref={progressRef}
                         className="h-full bg-emerald-500 w-full origin-left"

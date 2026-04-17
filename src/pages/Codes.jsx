@@ -24,10 +24,10 @@ export default function Codes() {
         {CODE_SECTIONS.map((section, index) => (
           <article
             key={section.id}
-            className="rounded-lg border border-border bg-surface/30 p-4"
+            className=" -lg border border-border bg-surface/30 p-4"
           >
             <div className="mb-3 flex flex-wrap items-center gap-2 text-xs">
-              <span className="rounded-full border border-border px-2 py-0.5 text-text-secondary">
+              <span className=" -full border border-border px-2 py-0.5 text-text-secondary">
                 Section {index + 1}
               </span>
             </div>
@@ -77,7 +77,7 @@ export default function Codes() {
                       <h4 className="text-sm font-medium text-text-primary mb-2">
                         Output
                       </h4>
-                      <pre className="rounded-md border border-border bg-background/60 p-3 text-sm text-text-secondary overflow-x-auto">
+                      <pre className=" -md border border-border bg-background/60 p-3 text-sm text-text-secondary overflow-x-auto">
                         <code>{snippet.output}</code>
                       </pre>
                     </div>
