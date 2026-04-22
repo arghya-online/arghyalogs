@@ -1,5 +1,5 @@
 import React from "react";
-import { CopyButton } from "../components/CopyButton";
+import { CopyButton } from "../../components/CopyButton";
 
 export const metadata = {
   title: "Why Version Control Exists",
@@ -25,9 +25,7 @@ function CodeBlock({ code }) {
 export default function BlogContent() {
   return (
     <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-      <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-        Life Before Version Control
-      </h2>
+
 
       <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
         The first version control system was introduced in 1972, at Bell Labs by

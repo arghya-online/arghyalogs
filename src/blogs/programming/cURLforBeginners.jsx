@@ -1,5 +1,5 @@
 import React from "react";
-import { CopyButton } from "../components/CopyButton";
+import { CopyButton } from "../../components/CopyButton";
 
 export const metadata = {
     title: "cURL for Beginners",
@@ -30,9 +30,7 @@ export default function BlogContent() {
                 alt="cURL for Beginners Preview"
                 className="w-full h-auto  -lg mb-8"
             />
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                Understanding How the Internet Talks
-            </h2>
+
 
             <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
                 The internet works through constant communication between computers. One computer asks for something, and another computer replies with data. This simple exchange is the base of everything online. Websites, mobile apps, and APIs all follow this same pattern. A request goes out, a response comes back, and the cycle repeats again and again. Once this idea is clear, many web related tools start making sense naturally.

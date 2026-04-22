@@ -13,11 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                Understanding Objects in JavaScript
-            </h2>
-
-            <section>
+            <section className="mt-8">
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     Programs often need to represent real things: a user profile, a product in an online store, a student in a classroom system, or a car in a rental platform. Each of these entities has <strong>multiple pieces of information attached to it</strong>. For example, a person has a name, an age, and a city. Storing all these pieces separately using different variables quickly becomes difficult to manage. JavaScript solves this problem with <strong>objects</strong>.
                 </p>

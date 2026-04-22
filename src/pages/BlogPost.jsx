@@ -1,6 +1,5 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { getBlogBySlug, getBlogsByCategory } from "@/lib/blogs";
-import { ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Helmet } from 'react-helmet-async';
 import BlogCard from "@/components/features/BlogCard";
@@ -26,16 +25,7 @@ export default function BlogPost() {
                 <meta property="og:type" content="article" />
             </Helmet>
 
-            <Link
-                to={`/${category}`}
-                className={cn(
-                    "inline-flex items-center gap-2 text-sm text-text-secondary mb-8 transition-colors",
-                    "hover:text-text-primary"
-                )}
-            >
-                <ArrowLeft className="h-4 w-4" />
-                Back to {category}
-            </Link>
+
 
             <header className={cn(
                 "mb-10 border-b border-border pb-6"

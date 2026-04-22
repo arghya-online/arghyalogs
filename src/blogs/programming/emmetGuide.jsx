@@ -1,5 +1,5 @@
 import React from "react";
-import { CodeBlock } from "../components/CodeBlock";
+import { CodeBlock } from "../../components/CodeBlock";
 
 export const metadata = {
     title: "Emmet for HTML: A Beginner’s Guide to Writing Faster Markup",
@@ -14,9 +14,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                Emmet for HTML: A Beginner’s Guide to Writing Faster Markup
-            </h2>
+
 
             <section>
                 <h3 className="mt-8 mb-4 text-xl sm:text-2xl font-semibold text-text-primary">

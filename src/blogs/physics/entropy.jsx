@@ -13,9 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                The Most Misunderstood Variable in Physics
-            </h2>
+
 
             <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                 Let’s be honest. When you first learned about entropy in high school chemistry or physics, someone probably told you it was a measure of “disorder.” They might have even used the analogy of your messy bedroom.

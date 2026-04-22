@@ -13,11 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                JavaScript Arrays 101
-            </h2>
-
-            <section>
+            <section className="mt-8">
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     In many programming situations, we need to work with <strong>multiple related values at once</strong>. A list of student marks, a collection of tasks, or a set of product names are all examples of grouped data. Storing each value in a separate variable quickly becomes difficult to manage. This is where <strong>arrays</strong> become useful.
                 </p>

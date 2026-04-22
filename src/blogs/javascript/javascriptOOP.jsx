@@ -13,11 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                Understanding Object-Oriented Programming in JavaScript
-            </h2>
-
-            <section>
+            <section className="mt-8">
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     As programs grow larger and more complex, keeping the code organized becomes a significant challenge. Early approaches to programming often resulted in scattered variables and standalone functions, making data hard to track and systems harder to maintain. <strong>Object-Oriented Programming (OOP)</strong> provides a solution to this problem. OOP is a design pattern that organizes software design around data, or objects, rather than functions and logic. By grouping related data and behaviors together into functional units, developers can build structured, modular, and reusable applications.
                 </p>

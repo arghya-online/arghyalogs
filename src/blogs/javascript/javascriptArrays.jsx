@@ -13,11 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                Array Methods You Must Know
-            </h2>
-
-            <section>
+            <section className="mt-8">
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     When you start learning JavaScript, arrays slowly become your best friend. At first they look like a simple list of values, but once you start working with real programs, you realize arrays are everywhere. A list of users, a list of products, a list of messages, a list of scores in a game, all of these are arrays. Imagine you are running a small café and you keep a notebook where you write every order that comes in. One line might say coffee, another says sandwich, another says cold drink. That notebook page is basically an array. Every order is an item in that list. Now imagine customers keep ordering, canceling, or adding new things. Instead of manually rewriting the whole list every time, JavaScript gives us powerful <strong>array methods</strong> to manage these lists easily.
                 </p>

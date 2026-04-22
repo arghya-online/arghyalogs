@@ -13,11 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                Arrow Functions in JavaScript: A Simpler Way to Write Functions
-            </h2>
-
-            <section>
+            <section className="mt-8">
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     When people first learn JavaScript functions, they usually start with the classic <code>function</code> keyword. It works perfectly fine, but the syntax can feel a little long and repetitive, especially when the function is very small. Modern JavaScript introduced <strong>arrow functions</strong> to make writing functions faster, cleaner, and easier to read. Think of arrow functions like a shorthand way of writing functions. The logic stays exactly the same, but the code becomes more compact. Imagine you are texting a friend. Instead of writing “See you later”, you might simply write “cu later”. The meaning stays the same, but the expression becomes shorter. Arrow functions follow a similar philosophy in JavaScript. They reduce boilerplate code and make simple functions look much cleaner.
                 </p>

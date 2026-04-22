@@ -54,11 +54,18 @@ export default function Blogs() {
 
             {/* Header & Search */}
             <header className="space-y-6">
-                <div>
-                    <h1 className="text-4xl font-bold tracking-tight mb-2">Logs & Notes</h1>
-                    <p className="text-text-secondary leading-relaxed max-w-prose">
-                        Thoughts, tutorials, and documentations on things I build or learn.
-                    </p>
+                <div className="flex items-baseline justify-between">
+                    <div>
+                        <h1 className="text-4xl font-bold tracking-tight mb-2 flex items-center gap-3">
+                            Logs & Notes
+                            <span className="text-lg font-mono text-accent opacity-60">
+                                /{allBlogs.length}
+                            </span>
+                        </h1>
+                        <p className="text-text-secondary leading-relaxed max-w-prose">
+                            Thoughts, tutorials, and documentations on things I build or learn.
+                        </p>
+                    </div>
                 </div>
 
                 <div className="relative max-w-md">

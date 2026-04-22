@@ -21,10 +21,7 @@ export default function BlogCard({ blog, type }) {
         <span>{blog.readTime}</span>
       </div>
 
-      <h3 className={cn(
-        "text-lg font-medium text-text-primary transition-colors",
-        "group-hover:text-accent"
-      )}>
+      <h3 className="text-lg font-medium text-text-primary transition-colors group-hover:text-accent">
         {blog.title}
       </h3>
 
@@ -48,13 +45,14 @@ export default function BlogCard({ blog, type }) {
   );
 
   const className = cn(
-    "block group p-4 -mx-4  -lg border border-transparent transition-colors",
-    "hover:bg-surface hover:border-border"
+    "relative block group p-4 -mx-4 rounded-lg border border-transparent transition-all duration-300",
+    "hover:bg-surface/50"
   );
 
   if (isExternal) {
     return (
       <a href={toLink} target="_blank" rel="noopener noreferrer" className={className}>
+        <div className="absolute left-0 top-6 bottom-6 w-0.5 bg-accent opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 ease-out" />
         <CardContent />
       </a>
     );
@@ -62,6 +60,7 @@ export default function BlogCard({ blog, type }) {
 
   return (
     <Link to={toLink} className={className}>
+      <div className="absolute left-0 top-6 bottom-6 w-0.5 bg-accent opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 ease-out" />
       <CardContent />
     </Link>
   );

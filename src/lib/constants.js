@@ -27,6 +27,5 @@ export const BLOG_CATEGORIES = [
   { name: "Programming", slug: "/programming", icon: Code },
   { name: "Networking", slug: "/networking", icon: Server },
   { name: "Physics", slug: "/physics", icon: Atom },
-  { name: "Astronomy", slug: "/astronomy", icon: Telescope },
   { name: "3AM Thoughts", slug: "/3amthoughts", icon: Leaf },
 ];

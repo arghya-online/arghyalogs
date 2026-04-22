@@ -13,11 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                Function Declaration vs Function Expression: What’s the Difference?
-            </h2>
-
-            <section>
+            <section className="mt-8">
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     When people begin learning JavaScript, one of the first concepts they encounter is <strong>functions</strong>. Functions are one of the core building blocks of programming. They allow us to group a set of instructions together and reuse them whenever needed. Instead of repeating the same logic multiple times, we write it once inside a function and call it whenever we want. Think of a function like a <strong>small machine that performs a task</strong>. You give it some input, it processes that input, and then it gives you a result. For example, imagine you are building a calculator program. Instead of writing addition logic again and again, you could simply create a function that adds two numbers and call it whenever needed.
                 </p>

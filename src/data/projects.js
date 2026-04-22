@@ -92,11 +92,12 @@ export const projects = [
 ];
 
 export const techColors = {
+  "HTML": "#e34c26",
+  "CSS": "#264de4",
   "JavaScript": "#f7df1e",
   "React": "#61dafb",
   "Node.js": "#68a063",
   "MongoDB": "#4db33d",
-  "Python": "#3776ab",
   "C++": "#00599c",
   "TailwindCSS": "#38bdf8",
   "Docker": "#2496ed"

@@ -38,11 +38,11 @@ export default function Portfolio() {
             </Helmet>
 
             {/* --- About Section --- */}
-            <motion.section 
-                initial="hidden" 
-                whileInView="visible" 
-                viewport={{ once: true, margin: "-50px" }} 
-                variants={staggerContainer} 
+            <motion.section
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
                 className="pt-8"
             >
                 <motion.h1 variants={fadeInUp} className="text-4xl font-bold tracking-tight mb-8 flex items-center gap-3">
@@ -58,11 +58,11 @@ export default function Portfolio() {
             </motion.section>
 
             {/* --- Skills Section --- */}
-            <motion.section 
-                initial="hidden" 
-                whileInView="visible" 
-                viewport={{ once: true, margin: "-50px" }} 
-                variants={staggerContainer} 
+            <motion.section
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
                 className="border-t border-border pt-12"
             >
                 <motion.h2 variants={fadeInUp} className="text-3xl font-bold mb-10 flex items-center gap-3 text-text-primary">
@@ -79,11 +79,11 @@ export default function Portfolio() {
             </motion.section>
 
             {/* --- Achievements --- */}
-            <motion.section 
-                initial="hidden" 
-                whileInView="visible" 
-                viewport={{ once: true, margin: "-50px" }} 
-                variants={staggerContainer} 
+            <motion.section
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
                 className="border-t border-border pt-10"
             >
                 <motion.h2 variants={fadeInUp} className="text-xl font-bold mb-4 flex items-center gap-2 text-text-primary">
@@ -94,18 +94,18 @@ export default function Portfolio() {
                     {achievements.map((ach, idx) => (
                         <li key={idx} className="flex items-start gap-3 text-sm text-text-secondary">
                             <span className="mt-1.5 w-1.5 h-1.5 flex-shrink-0 bg-border inline-block"></span>
-                            <span><span className="font-medium text-text-primary">{ach.title}</span> — {ach.description}</span>
+                            <span><span className="font-medium text-text-primary">{ach.title}</span> -{ach.description}</span>
                         </li>
                     ))}
                 </motion.ul>
             </motion.section>
 
             {/* --- Experience --- */}
-            <motion.section 
-                initial="hidden" 
-                whileInView="visible" 
-                viewport={{ once: true, margin: "-50px" }} 
-                variants={staggerContainer} 
+            <motion.section
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
                 className="border-t border-border pt-10"
             >
                 <motion.h2 variants={fadeInUp} className="text-xl font-bold mb-6 text-text-primary">Experience</motion.h2>
@@ -151,11 +151,11 @@ export default function Portfolio() {
             </motion.section>
 
             {/* --- Education --- */}
-            <motion.section 
-                initial="hidden" 
-                whileInView="visible" 
-                viewport={{ once: true, margin: "-50px" }} 
-                variants={staggerContainer} 
+            <motion.section
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={staggerContainer}
                 className="border-t border-border pt-10"
             >
                 <motion.h2 variants={fadeInUp} className="text-xl font-bold mb-6 text-text-primary">Education</motion.h2>
@@ -169,11 +169,11 @@ export default function Portfolio() {
             </motion.section>
 
             {/* --- Resume Download --- */}
-            <motion.section 
-                initial="hidden" 
-                whileInView="visible" 
-                viewport={{ once: true, margin: "-50px" }} 
-                variants={fadeInUp} 
+            <motion.section
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeInUp}
                 className="border-t border-border pt-8 flex items-center justify-between"
             >
                 <p className="text-sm text-text-secondary">Want the full PDF version?</p>

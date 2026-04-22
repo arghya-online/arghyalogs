@@ -1,5 +1,5 @@
 import React from "react";
-import { CopyButton } from "../components/CopyButton";
+import { CopyButton } from "../../components/CopyButton";
 
 export const metadata = {
     title: "What Is Git",
@@ -27,9 +27,7 @@ export default function BlogContent() {
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
             <img src="/blogs/what-is-git/how-git-works.png" alt="How Git Works" className="w-full my-8 border border-border" />
 
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                What Is Git
-            </h2>
+
             <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">
                 In today's modern software development environment, Git is a handy and
                 powerful tool that is also open-source. It is a free and open source

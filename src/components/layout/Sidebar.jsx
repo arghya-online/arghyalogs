@@ -42,7 +42,7 @@ export default function Sidebar({ onOpenSearch }) {
                                 to={category.slug}
                                 className={({ isActive }) =>
                                     cn(
-                                        "flex items-center gap-3 px-3 py-2 text-sm font-medium transition-colors hover:bg-surface hover:text-text-primary",
+                                        "flex items-center gap-3 px-3 py-2 text-sm font-medium transition-all hover:bg-surface hover:text-text-primary hover:scale-[1.02]",
                                         isActive && category.slug !== "/"
                                             ? "bg-surface text-text-primary border-l-2 border-accent"
                                             : isActive && category.slug === "/" && location.pathname === "/"

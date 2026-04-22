@@ -13,9 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                TCP, UDP, and HTTP
-            </h2>
+
 
             <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                 Every time you open your laptop or pick up your phone, you are

@@ -1,5 +1,5 @@
 
-const modules = import.meta.glob('../blogs/*.jsx', { eager: true });
+const modules = import.meta.glob('../blogs/**/*.jsx', { eager: true });
 
 export const getAllBlogs = () => {
     return Object.values(modules).map((module) => ({

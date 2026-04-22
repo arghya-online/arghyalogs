@@ -1,5 +1,5 @@
 import React from "react";
-import { CopyButton } from "../components/CopyButton";
+import { CopyButton } from "../../components/CopyButton";
 
 export const metadata = {
     title: "How DNS Resolution Works",
@@ -30,7 +30,7 @@ export default function BlogContent() {
                 alt="DNS Without the Mystery Preview"
                 className="w-full h-auto  -lg mb-8"
             />
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">DNS Without Guesswork</h2>
+
 
             <p className="mb-6 text-base sm:text-lg leading-relaxed text-text-secondary">Before a website loads or an app connects, there is a small step that decides everything that follows. Your system needs to find the correct place to send the request. It is not trying to understand the page or fetch content yet. It is only trying to answer one simple question. Where should this name point to? If that answer is wrong or missing, nothing else even starts.</p>
 

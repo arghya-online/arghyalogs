@@ -13,11 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                Control Flow in JavaScript: If, Else, and Switch Explained
-            </h2>
-
-            <section>
+            <section className="mt-8">
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     When we write programs, we are not just giving instructions that run in a straight line. Real programs constantly make decisions. Sometimes the code should run one block, sometimes another. This decision making process is called <strong>control flow</strong>. In simple words, control flow decides <strong>which part of the code runs and when</strong>. Think about real life. Every day you make small decisions. If it is raining, you take an umbrella. If it is sunny, you wear sunglasses. If it is late at night, you go to sleep. Your brain is constantly checking conditions and choosing actions. Programming works in exactly the same way. JavaScript uses structures like <strong>if, else, else if, and switch</strong> to control how a program behaves based on conditions.
                 </p>

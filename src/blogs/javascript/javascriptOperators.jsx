@@ -13,11 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                JavaScript Operators: The Basics You Need to Know
-            </h2>
-
-            <section>
+            <section className="mt-8">
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     When writing JavaScript programs, we often need to perform operations on values. Sometimes we add numbers, sometimes we compare two values, and sometimes we combine multiple conditions to make decisions. The symbols that help us perform these operations are called <strong>operators</strong>. In simple words, an operator is something that <strong>performs an action on values or variables</strong>. Think about basic mathematics from school. When you write something like <code>5 + 3</code>, the plus symbol is doing the work of adding two numbers together. In JavaScript, operators play the same role. They help the program calculate, compare, and evaluate information so that the code can behave logically.
                 </p>

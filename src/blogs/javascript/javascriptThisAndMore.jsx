@@ -13,11 +13,7 @@ export const metadata = {
 export default function BlogContent() {
     return (
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
-            <h2 className="mt-12 mb-6 text-xl sm:text-2xl sm:text-3xl font-bold tracking-tight text-text-primary">
-                The Magic of this, call(), apply(), and bind() in JavaScript
-            </h2>
-
-            <section>
+            <section className="mt-8">
                 <p className="mb-4 text-base sm:text-lg leading-relaxed text-text-secondary">
                     JavaScript has many features that feel simple at first but reveal deeper behavior as you explore them. One of the most interesting and sometimes confusing concepts is the keyword <strong><code>this</code></strong>. Many developers struggle with it in the beginning because its value is not fixed. Unlike variables that hold a constant reference, <code>this</code> changes depending on <strong>how and where a function is called</strong>. The simplest way to understand it is this: <strong><code>this</code> represents the object that is calling the function</strong>. In other words, it answers the question <strong>“who is executing this function right now?”</strong>.
                 </p>

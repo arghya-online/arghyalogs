@@ -28,7 +28,7 @@ export default function Home() {
 
                 {/* Status badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 border border-border bg-surface text-xs font-mono text-text-secondary">
-                    <span className="w-1.5 h-1.5  -full bg-green-500 inline-block"></span>
+                    <span className="w-1.5 h-1.5  -full bg-green-500 inline-block pulse-status"></span>
                     Available for work · Kolkata, India
                 </div>
 
@@ -63,19 +63,19 @@ export default function Home() {
                 <div className="flex flex-wrap gap-3">
                     <Link
                         to="/projects"
-                        className="px-4 py-2 text-sm font-medium bg-surface text-text-primary transition-colors hover:bg-border border border-border"
+                        className="px-4 py-2 text-sm font-medium bg-surface text-text-primary transition-all hover:bg-border border border-border hover:scale-105 hover:shadow-[0_0_20px_rgba(251,146,60,0.15)]"
                     >
                         Projects
                     </Link>
                     <Link
                         to="/portfolio"
-                        className="px-4 py-2 text-sm font-medium bg-surface text-text-primary transition-colors hover:bg-border border border-border"
+                        className="px-4 py-2 text-sm font-medium bg-surface text-text-primary transition-all hover:bg-border border border-border hover:scale-105 hover:shadow-[0_0_20px_rgba(251,146,60,0.15)]"
                     >
                         Portfolio
                     </Link>
                     <Link
                         to="/blogs"
-                        className="px-4 py-2 text-sm font-medium bg-surface text-text-primary transition-colors hover:bg-border border border-border"
+                        className="px-4 py-2 text-sm font-medium bg-surface text-text-primary transition-all hover:bg-border border border-border hover:scale-105 hover:shadow-[0_0_20px_rgba(251,146,60,0.15)]"
                     >
                         Blogs
                     </Link>
@@ -83,22 +83,22 @@ export default function Home() {
 
                 {/* Social links */}
                 <div className="flex flex-wrap items-center gap-5">
-                    <a href="https://github.com/arghya-online" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary transition-colors" aria-label="GitHub">
+                    <a href="https://github.com/arghya-online" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-[#fb923c] transition-all hover:scale-110" aria-label="GitHub">
                         <Github className="h-5 w-5" />
                     </a>
-                    <a href="https://linkedin.com/in/arghya" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary transition-colors" aria-label="LinkedIn">
+                    <a href="https://linkedin.com/in/arghya" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-[#fb923c] transition-all hover:scale-110" aria-label="LinkedIn">
                         <Linkedin className="h-5 w-5" />
                     </a>
-                    <a href="https://x.com/arghyabuilds" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary transition-colors" aria-label="Twitter">
+                    <a href="https://x.com/arghyabuilds" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-[#fb923c] transition-all hover:scale-110" aria-label="Twitter">
                         <Twitter className="h-5 w-5" />
                     </a>
-                    <a href="https://instagram.com/arghya" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary transition-colors" aria-label="Instagram">
+                    <a href="https://instagram.com/arghya" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-[#fb923c] transition-all hover:scale-110" aria-label="Instagram">
                         <Instagram className="h-5 w-5" />
                     </a>
-                    <a href="https://www.youtube.com/@arghya_explains_" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary transition-colors" aria-label="YouTube">
+                    <a href="https://www.youtube.com/@arghya_explains_" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-[#ff0000] transition-all hover:scale-110" aria-label="YouTube">
                         <Youtube className="h-5 w-5" />
                     </a>
-                    <a href="mailto:arghyamajumdar.contact@gmail.com" className="text-text-secondary hover:text-text-primary transition-colors" aria-label="Email">
+                    <a href="mailto:arghyamajumdar.contact@gmail.com" className="text-text-secondary hover:text-[#fb923c] transition-all hover:scale-110" aria-label="Email">
                         <Mail className="h-5 w-5" />
                     </a>
                 </div>
@@ -168,8 +168,11 @@ export default function Home() {
 
             {/* BLOG PREVIEW */}
             <section className="space-y-6">
-                <h2 className="text-2xl font-bold text-text-primary border-t border-border pt-8 mt-2">
+                <h2 className="text-2xl font-bold text-text-primary border-t border-border pt-8 mt-2 flex items-center justify-between">
                     Recent Notes
+                    <span className="text-sm font-mono text-accent opacity-60">
+                        {allBlogs.length} total
+                    </span>
                 </h2>
 
                 <div className="space-y-2">
