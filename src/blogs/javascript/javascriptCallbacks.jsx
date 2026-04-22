@@ -32,7 +32,7 @@ export default function BlogContent() {
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary mt-8">
                 <p>
-                    Callbacks often represent the first major hurdle for developers learning JavaScript. The concept of passing a function as a value to another function feels counter-intuitive when you are used to functions being static blocks of logic that are merely "called." It introduces a layer of abstraction that seems unnecessary until you encounter operations that don't produce immediate results—like timers, API calls, or user events.
+                    Callbacks often represent the first major hurdle for developers learning JavaScript. The concept of passing a function as a value to another function feels counter-intuitive when you are used to functions being static blocks of logic that are merely "called." It introduces a layer of abstraction that seems unnecessary until you encounter operations that don't produce immediate results-like timers, API calls, or user events.
                 </p>
                 <p>
                     Understanding callbacks isn't about learning a new syntax; it's about shifting your perspective on how execution is controlled. Once you accept that a function is just another type of value, the entire asynchronous nature of JavaScript starts to become predictable rather than confusing.
@@ -96,7 +96,7 @@ export default function BlogContent() {
                     Once you recognize the pattern, you see callbacks everywhere: in event listeners, array methods like <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">map</code> and <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">filter</code>, and specialized utility functions. In all these cases, the callback serves as a way to inject custom logic into a pre-defined process. You don't just write instructions; you define reactions.
                 </p>
                 <p>
-                    However, this power comes with a readability cost. Deeply nested callbacks—often called "callback hell"—can make the flow of a program difficult to track. While modern abstractions like Promises and Async/Await were created to solve this visual nesting, they are all built upon the fundamental concept of the callback. Understanding this base layer is essential for truly mastering how control flow works in JavaScript.
+                    However, this power comes with a readability cost. Deeply nested callbacks-often called "callback hell"-can make the flow of a program difficult to track. While modern abstractions like Promises and Async/Await were created to solve this visual nesting, they are all built upon the fundamental concept of the callback. Understanding this base layer is essential for truly mastering how control flow works in JavaScript.
                 </p>
             </section>
 

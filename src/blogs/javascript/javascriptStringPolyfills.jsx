@@ -32,7 +32,7 @@ export default function BlogContent() {
         <article className="max-w-none mx-auto sm:px-6 text-text-primary">
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary mt-8">
                 <p>
-                    Relying blindly on built-in methods is a common trap in modern web development. While methods like <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">split</code>, <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">slice</code>, and <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">includes</code> are efficient and reliable, using them without understanding their internal mechanics creates a gap in technical depth—one that becomes painfully obvious during technical interviews.
+                    Relying blindly on built-in methods is a common trap in modern web development. While methods like <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">split</code>, <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">slice</code>, and <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">includes</code> are efficient and reliable, using them without understanding their internal mechanics creates a gap in technical depth-one that becomes painfully obvious during technical interviews.
                 </p>
                 <p>
                     A string in JavaScript isn't an abstract entity; it's a sequence of characters stored in memory. Every method you invoke is simply a predefined algorithm applied to that sequence. To truly master string manipulation, you must move beyond memorizing syntax and start recognizing the patterns of traversal and reconstruction that these methods represent.
@@ -52,7 +52,7 @@ export default function BlogContent() {
                 <CodeBlock code={`function myIncludes(str, search) {\n    for (let i = 0; i <= str.length - search.length; i++) {\n        let match = true;\n\n        for (let j = 0; j < search.length; j++) {\n            if (str[i + j] !== search[j]) {\n                match = false;\n                break;\n            }\n        }\n\n        if (match) return true;\n    }\n\n    return false;\n}`} />
 
                 <p>
-                    This manual implementation highlights that <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">includes</code> is just substring matching. There are no shortcuts—just iteration and comparison. Once this mechanic is clear, you can apply the same logic to more complex problems like pattern recognition or custom text parsers.
+                    This manual implementation highlights that <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">includes</code> is just substring matching. There are no shortcuts-just iteration and comparison. Once this mechanic is clear, you can apply the same logic to more complex problems like pattern recognition or custom text parsers.
                 </p>
             </section>
 
@@ -83,7 +83,7 @@ export default function BlogContent() {
                     Solving string-based problems becomes remarkably easier when you categorize them into patterns: substring matching, frequency counting, and two-pointer traversals. Memorization is limited, but pattern recognition is scalable. When you understand how <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">split</code> or <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">slice</code> behaves internally, you stop guessing and start predicting how your logic will perform in real-world scenarios.
                 </p>
                 <p>
-                    This shift in perspective—from using tools to using solutions—is what characterizes an experienced developer. It makes your code more predictable and reduces the time spent on unexpected behavior. You begin to use built-in methods with intent, knowing exactly when they are the right choice and when custom logic is required to handle a unique edge case.
+                    This shift in perspective-from using tools to using solutions-is what characterizes an experienced developer. It makes your code more predictable and reduces the time spent on unexpected behavior. You begin to use built-in methods with intent, knowing exactly when they are the right choice and when custom logic is required to handle a unique edge case.
                 </p>
             </section>
 

@@ -43,9 +43,9 @@ export default function BlogContent() {
             </h2>
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary">
                 <p>
-                    It’s easy to assume <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">this</code> refers to the function or the object where it is written. That assumption works sometimes, which is why it feels correct. But it breaks the moment the function is called differently. At that point, nothing about <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">this</code> is clear—it depends entirely on how the function gets executed.
+                    It’s easy to assume <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">this</code> refers to the function or the object where it is written. That assumption works sometimes, which is why it feels correct. But it breaks the moment the function is called differently. At that point, nothing about <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">this</code> is clear-it depends entirely on how the function gets executed.
                 </p>
-                
+
                 <CodeBlock code={`function show() {\n    console.log(this);\n}`} />
 
                 <p>
@@ -108,7 +108,7 @@ export default function BlogContent() {
             </h2>
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary">
                 <p>
-                    Arrow functions behave and look differently for a reason. They don’t create their own <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">this</code> binding; instead, they take it from the surrounding scope. This means if you use an arrow function as an object method, it might not point to the object at all. It will point to whatever <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">this</code> was where the object was defined—often the global object. That’s why arrow functions are usually avoided for object methods when you need to access other properties via the execution context.
+                    Arrow functions behave and look differently for a reason. They don’t create their own <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">this</code> binding; instead, they take it from the surrounding scope. This means if you use an arrow function as an object method, it might not point to the object at all. It will point to whatever <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">this</code> was where the object was defined-often the global object. That’s why arrow functions are usually avoided for object methods when you need to access other properties via the execution context.
                 </p>
 
                 <CodeBlock code={`const user = {\n    name: "Arghya",\n    greet: () => {\n        console.log(this.name);\n    }\n};\n\nuser.greet();`} />

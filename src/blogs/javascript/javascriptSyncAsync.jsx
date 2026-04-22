@@ -47,7 +47,7 @@ export default function BlogContent() {
             </h2>
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary">
                 <p>
-                    Synchronous execution is intuitive because it follows the order of the source code. However, when a task—such as a complex calculation or a network request—takes significant time, it blocks the main thread. During this period, the application becomes unresponsive; the browser cannot handle clicks, scroll events, or UI updates. This "blocking" behavior is the primary reason why synchronous programming is insufficient for high-performance web development.
+                    Synchronous execution is intuitive because it follows the order of the source code. However, when a task-such as a complex calculation or a network request-takes significant time, it blocks the main thread. During this period, the application becomes unresponsive; the browser cannot handle clicks, scroll events, or UI updates. This "blocking" behavior is the primary reason why synchronous programming is insufficient for high-performance web development.
                 </p>
 
                 <CodeBlock code={`function longTask() {\n    const start = Date.now();\n    while (Date.now() - start < 3000) {}\n}\n\nconsole.log("Start");\nlongTask(); // UI freezes for 3 seconds\nconsole.log("End");`} />

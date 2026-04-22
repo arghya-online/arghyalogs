@@ -35,7 +35,7 @@ export default function BlogContent() {
                     Asynchronous programming in JavaScript has historically suffered from a readability gap. While promises solved the problem of "callback hell," they introduced their own brand of complexity: long, branching <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">.then()</code> chains that obscured the linear intent of the logic. Async/await bridges this gap not by replacing promises, but by providing a synchronous-style interface for asynchronous operations, allowing developers to write code that reads exactly as it executes.
                 </p>
                 <p>
-                    This transformation from chaining to linear flow is more than just "syntactic sugar"—it's a fundamental improvement in how we reason about temporal dependencies in our applications.
+                    This transformation from chaining to linear flow is more than just "syntactic sugar"-it's a fundamental improvement in how we reason about temporal dependencies in our applications.
                 </p>
             </section>
 

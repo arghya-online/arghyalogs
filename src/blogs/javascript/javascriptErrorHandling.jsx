@@ -64,7 +64,7 @@ export default function BlogContent() {
             </h2>
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary">
                 <p>
-                    The <code className="text-accent font-mono px-1">finally</code> block is an often-overlooked tool for ensuring structural integrity. It executes regardless of whether the initial code succeeded or failed. This makes it the ideal location for cleanup operations that must occur in either scenario—such as closing database connections, stopping loading indicators, or resetting a global state. It ensures that your application doesn't leak memory or leave the UI "stuck" in a loading state after a failure.
+                    The <code className="text-accent font-mono px-1">finally</code> block is an often-overlooked tool for ensuring structural integrity. It executes regardless of whether the initial code succeeded or failed. This makes it the ideal location for cleanup operations that must occur in either scenario-such as closing database connections, stopping loading indicators, or resetting a global state. It ensures that your application doesn't leak memory or leave the UI "stuck" in a loading state after a failure.
                 </p>
 
                 <CodeBlock code={`try {\n    startLoader();\n    renderData();\n} catch (error) {\n    handleFailure(error);\n} finally {\n    stopLoader(); // Executed in all cases\n}`} />
@@ -91,7 +91,7 @@ export default function BlogContent() {
 
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary mb-12">
                 <p>
-                    Effective error handling is about shifting from defensive coding to opportunistic management. In the real world, networks fail, APIs change, and users provide unpredictable input. Your goal isn't to prevent these errors—that's impossible—but to control how the system reacts to them. Once you view <code className="text-accent font-mono px-1">try</code>, <code className="text-accent font-mono px-1">catch</code>, and <code className="text-accent font-mono px-1">finally</code> as tools for managing state rather than just syntax for handling crashes, your code becomes significantly more robust and professional.
+                    Effective error handling is about shifting from defensive coding to opportunistic management. In the real world, networks fail, APIs change, and users provide unpredictable input. Your goal isn't to prevent these errors-that's impossible-but to control how the system reacts to them. Once you view <code className="text-accent font-mono px-1">try</code>, <code className="text-accent font-mono px-1">catch</code>, and <code className="text-accent font-mono px-1">finally</code> as tools for managing state rather than just syntax for handling crashes, your code becomes significantly more robust and professional.
                 </p>
             </section>
         </article>

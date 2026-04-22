@@ -63,7 +63,7 @@ export default function BlogContent() {
             </h2>
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary">
                 <p>
-                    When you use <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">new</code>, JavaScript performs four specific operations in sequence. First, it creates a brand-new empty object. Second, it links this object to the constructor function’s prototype—establishing the inheritance chain. Third, it binds the <code className="text-accent font-mono px-1">this</code> context of the function to the new object, allowing the function body to populate it with properties. Finally, it executes the function logic and returns the object automatically.
+                    When you use <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">new</code>, JavaScript performs four specific operations in sequence. First, it creates a brand-new empty object. Second, it links this object to the constructor function’s prototype-establishing the inheritance chain. Third, it binds the <code className="text-accent font-mono px-1">this</code> context of the function to the new object, allowing the function body to populate it with properties. Finally, it executes the function logic and returns the object automatically.
                 </p>
                 <p>
                     This automation is what makes constructors powerful. You aren't just calling logic; you are triggering a structural lifecycle that ensures every "instance" of <code className="text-accent font-mono px-1">User</code> shares the same genetic makeup and inheritance hierarchy.
@@ -99,7 +99,7 @@ export default function BlogContent() {
                     Every object resulting from this process is an instance of its constructor. They remain independent in terms of data but unified in terms of behavior. This distinction is vital for maintaining state without sacrificing structural integrity. If you omit <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">new</code>, the <code className="text-accent font-mono px-1">this</code> context typically reverts to the global object or becomes <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">undefined</code> (in strict mode), leading to subtle failures that can be difficult to track in large applications.
                 </p>
                 <p>
-                    Even modern ES6 classes rely on this exact mechanism. Classes are effectively "syntactic sugar" over constructor functions and prototype linking. Understanding the raw process behind <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">new</code> gives you a deeper clarity on how all object-oriented patterns in JavaScript—including classes—actually manage memory and execution context.
+                    Even modern ES6 classes rely on this exact mechanism. Classes are effectively "syntactic sugar" over constructor functions and prototype linking. Understanding the raw process behind <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">new</code> gives you a deeper clarity on how all object-oriented patterns in JavaScript-including classes-actually manage memory and execution context.
                 </p>
             </section>
 

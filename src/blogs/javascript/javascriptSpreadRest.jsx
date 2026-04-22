@@ -8,7 +8,7 @@ export const metadata = {
     category: "JavaScript",
     readTime: "6 min",
     summary:
-        "De-confusing the '...' syntax. A dive into why the same operator behaves differently depending on context—expanding values (Spread) versus collecting them (Rest).",
+        "De-confusing the '...' syntax. A dive into why the same operator behaves differently depending on context-expanding values (Spread) versus collecting them (Rest).",
 };
 
 function CodeBlock({ code, language = "javascript" }) {
@@ -33,7 +33,7 @@ export default function BlogContent() {
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary mt-8">
                 <CodeBlock code={`const arr = [1, 2, 3];\nconst newArr = [...arr, 4];`} />
                 <p>
-                    The triple-dot syntax (<code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">...</code>) in JavaScript is a source of frequent confusion, primarily because it serves two diametrically opposed purposes depending on its context. In some scenarios, it expands data structures into individual elements; in others, it collects individual elements into a single structure. This duality—Spread and Rest—is not a single operator with multiple behaviors, but rather a shared syntax for two distinct conceptual operations.
+                    The triple-dot syntax (<code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">...</code>) in JavaScript is a source of frequent confusion, primarily because it serves two diametrically opposed purposes depending on its context. In some scenarios, it expands data structures into individual elements; in others, it collects individual elements into a single structure. This duality-Spread and Rest-is not a single operator with multiple behaviors, but rather a shared syntax for two distinct conceptual operations.
                 </p>
                 <p>
                     Understanding when <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">...</code> is expanding versus collecting is the key to mastering modern, functional JavaScript patterns.
@@ -102,7 +102,7 @@ export default function BlogContent() {
 
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary mb-12">
                 <p>
-                    In modern development, these operators are more than just syntactic shortcuts; they are the vocabulary of immutability and flexible API design. By understanding the directional nature of <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">...</code>, you stop guessing and start engineering data flows that are both predictable and cleaner to read. The operator is no longer a "trick"—it becomes a fundamental tool for managing complexity in your codebase.
+                    In modern development, these operators are more than just syntactic shortcuts; they are the vocabulary of immutability and flexible API design. By understanding the directional nature of <code className="px-1.5 py-0.5 bg-surface border border-border font-mono text-sm">...</code>, you stop guessing and start engineering data flows that are both predictable and cleaner to read. The operator is no longer a "trick"-it becomes a fundamental tool for managing complexity in your codebase.
                 </p>
             </section>
         </article>

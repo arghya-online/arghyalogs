@@ -63,7 +63,7 @@ export default function BlogContent() {
             </h2>
             <section className="space-y-6 text-base sm:text-lg leading-relaxed text-text-secondary">
                 <p>
-                    Flattening is essentially a traversal problem. To flatten an array, you must visit every element. If an element is a value, you collect it; if it's an array, you must descend into that array and repeat the process. It’s not about "removing brackets" in a string-like fashion—it's about walking a tree structure and collecting its leaves into a flat sequence.
+                    Flattening is essentially a traversal problem. To flatten an array, you must visit every element. If an element is a value, you collect it; if it's an array, you must descend into that array and repeat the process. It’s not about "removing brackets" in a string-like fashion-it's about walking a tree structure and collecting its leaves into a flat sequence.
                 </p>
                 <p>
                     This transformation simplifies mapping, filtering, and reduction logic by ensuring every element in the resulting collection shares the same shape. This is critical when dealing with grouped data or nested API responses where the depth of information isn't always consistent.
