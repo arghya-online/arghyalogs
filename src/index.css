@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -79,21 +78,50 @@
 }
 
 .handlee-regular {
-  font-family: "Handlee", cursive !important;
+  font-family: "Handlee", "Comic Sans MS", cursive, sans-serif !important;
   font-weight: 400;
   font-style: normal;
 }
 
-.handlee-regular h1,
-.handlee-regular h2,
-.handlee-regular h3,
-.handlee-regular h4,
-.handlee-regular h5,
-.handlee-regular h6,
-.handlee-regular p,
-.handlee-regular span,
-.handlee-regular li,
-.handlee-regular time,
-.handlee-regular div:not([class*="CopyButton"]):not([class*="CodeBlock"]) {
-  font-family: "Handlee", cursive !important;
+.kalam-light {
+  font-family: "Kalam", "Comic Sans MS", cursive, sans-serif !important;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kalam-regular {
+  font-family: "Kalam", "Comic Sans MS", cursive, sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kalam-bold {
+  font-family: "Kalam", "Comic Sans MS", cursive, sans-serif !important;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kalam-blog-container {
+  font-family: "Kalam", "Comic Sans MS", cursive, sans-serif !important;
+}
+
+.kalam-blog-container p,
+.kalam-blog-container span,
+.kalam-blog-container li,
+.kalam-blog-container time,
+.kalam-blog-container div:not([class*="CopyButton"]):not([class*="CodeBlock"]) {
+  font-family: "Kalam", "Comic Sans MS", cursive, sans-serif !important;
+  font-weight: 400;
+  font-style: normal !important;
+}
+
+.kalam-blog-container h1,
+.kalam-blog-container h2,
+.kalam-blog-container h3,
+.kalam-blog-container h4,
+.kalam-blog-container h5,
+.kalam-blog-container h6 {
+  font-family: "Kalam", "Comic Sans MS", cursive, sans-serif !important;
+  font-weight: 700;
+  font-style: normal !important;
 }
