@@ -16,7 +16,7 @@ export default function BlogPost() {
     const relatedBlogs = getBlogsByCategory(category).filter(b => b.slug !== slug).slice(0, 3);
 
     return (
-        <article className="w-full mx-auto pb-12">
+        <article className="w-full mx-auto pb-12 handlee-regular">
             <Helmet>
                 <title>{blog.title} - Arghya Logs</title>
                 <meta name="description" content={blog.summary} />

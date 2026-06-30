@@ -77,3 +77,23 @@
     @apply text-xl sm:text-2xl font-semibold;
   }
 }
+
+.handlee-regular {
+  font-family: "Handlee", cursive !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.handlee-regular h1,
+.handlee-regular h2,
+.handlee-regular h3,
+.handlee-regular h4,
+.handlee-regular h5,
+.handlee-regular h6,
+.handlee-regular p,
+.handlee-regular span,
+.handlee-regular li,
+.handlee-regular time,
+.handlee-regular div:not([class*="CopyButton"]):not([class*="CodeBlock"]) {
+  font-family: "Handlee", cursive !important;
+}
