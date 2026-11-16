@@ -252,8 +252,8 @@ function EditorialProjectSection({ project, index, total }) {
           </div>
 
           {/* 2. Large expressive title + tagline */}
-          <div className="space-y-1.5 sm:space-y-2">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-text-primary font-jakarta leading-tight">
+          <div className="space-y-1 sm:space-y-1.5">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold tracking-tight text-text-primary font-jakarta leading-tight break-words">
               <Link
                 to={`/projects/${slug}`}
                 className="hover:text-amber-500 transition-colors inline-block"
@@ -270,7 +270,7 @@ function EditorialProjectSection({ project, index, total }) {
           </div>
 
           {/* 3. Concise 2-3 line description */}
-          <p className="text-base sm:text-lg text-text-secondary leading-relaxed font-sans max-w-xl">
+          <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-sans max-w-xl">
             {project.description}
           </p>
 
@@ -278,7 +278,7 @@ function EditorialProjectSection({ project, index, total }) {
           <div className="space-y-2.5 pt-1">
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-mono uppercase tracking-widest text-text-secondary flex items-center gap-1.5">
-                <Layers className="w-3.5 h-3.5 text-amber-500" />
+                <Layers className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" />
                 <span>Tech Stack & Architecture</span>
               </span>
               <span className="font-mono text-[10px] text-text-secondary/70">
@@ -286,16 +286,16 @@ function EditorialProjectSection({ project, index, total }) {
               </span>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
               {techList.map((technology) => {
                 const color = techColors[technology] || "#f59e0b";
                 return (
                   <span
                     key={technology}
-                    className="group/tech inline-flex items-center gap-2 px-3 py-1.5 text-xs font-mono font-medium rounded-sm border border-border/80 bg-surface/90 text-text-primary transition-all duration-300 hover:border-amber-500/70 hover:bg-surface hover:-translate-y-0.5 hover:shadow-[0_2px_10px_rgba(0,0,0,0.06)] select-none"
+                    className="group/tech inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1 text-[11px] sm:text-xs font-mono font-medium rounded-sm border border-border/80 bg-surface/90 text-text-primary transition-all duration-300 hover:border-amber-500/70 hover:bg-surface hover:-translate-y-0.5 hover:shadow-[0_2px_8px_rgba(0,0,0,0.06)] select-none"
                   >
                     <span
-                      className="w-2 h-2 rounded-full flex-shrink-0 ring-1 ring-border/50 transition-transform duration-300 group-hover/tech:scale-125"
+                      className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 ring-1 ring-border/50 transition-transform duration-300 group-hover/tech:scale-125"
                       style={{
                         backgroundColor: color,
                         boxShadow: `0 0 6px ${color}66`,
@@ -312,20 +312,20 @@ function EditorialProjectSection({ project, index, total }) {
           </div>
 
           {/* 5. Clear Accessible Links: Live Demo & GitHub Repository */}
-          <div className="flex flex-wrap items-center gap-6 sm:gap-8 pt-3 border-t border-border/70">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-8 pt-3 border-t border-border/70">
             {/* Live Demo Link */}
             {liveUrl && (
               <a
                 href={liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/link relative inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-text-primary hover:text-amber-500 transition-colors py-1"
+                className="group/link relative inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base font-semibold text-text-primary hover:text-amber-500 transition-colors py-1"
                 aria-label={`Open live demo of ${title}`}
               >
                 <span className="relative after:absolute after:bottom-[-2px] after:left-0 after:h-[1.5px] after:w-full after:bg-amber-500 after:origin-left after:scale-x-0 group-hover/link:after:scale-x-100 after:transition-transform after:duration-300">
                   Live Demo
                 </span>
-                <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 text-amber-500" />
+                <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 text-amber-500" />
               </a>
             )}
 
@@ -335,10 +335,10 @@ function EditorialProjectSection({ project, index, total }) {
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/link relative inline-flex items-center gap-2 text-sm sm:text-base font-medium text-text-secondary hover:text-text-primary transition-colors py-1"
+                className="group/link relative inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base font-medium text-text-secondary hover:text-text-primary transition-colors py-1"
                 aria-label={`View GitHub repository for ${title}`}
               >
-                <Github className="w-4 h-4 transition-colors group-hover/link:text-text-primary" />
+                <Github className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-colors group-hover/link:text-text-primary" />
                 <span className="relative after:absolute after:bottom-[-2px] after:left-0 after:h-[1.5px] after:w-full after:bg-text-primary after:origin-left after:scale-x-0 group-hover/link:after:scale-x-100 after:transition-transform after:duration-300">
                   GitHub
                 </span>
@@ -348,7 +348,7 @@ function EditorialProjectSection({ project, index, total }) {
             {/* Read Documentation link */}
             <Link
               to={`/projects/${slug}`}
-              className="group/link text-xs sm:text-sm font-mono text-text-secondary hover:text-amber-500 transition-colors inline-flex items-center gap-1.5 ml-auto py-1"
+              className="group/link text-xs sm:text-sm font-mono text-text-secondary hover:text-amber-500 transition-colors inline-flex items-center gap-1 sm:gap-1.5 ml-auto py-1"
             >
               <span>Overview</span>
               <span className="transition-transform group-hover/link:translate-x-0.5">
@@ -362,13 +362,13 @@ function EditorialProjectSection({ project, index, total }) {
       {/* Editorial Separator between consecutive project sections */}
       {!isLast && (
         <div
-          className="w-full my-20 sm:my-28 lg:my-36 border-t border-border/70 relative flex items-center justify-between"
+          className="w-full my-12 sm:my-16 lg:my-24 border-t border-border/70 relative flex items-center justify-between"
           aria-hidden="true"
         >
-          <div className="absolute -top-[9px] left-0 px-2 bg-background font-mono text-[10px] text-text-secondary uppercase tracking-widest select-none">
+          <div className="absolute -top-[9px] left-0 px-2 bg-background font-mono text-[9px] sm:text-[10px] text-text-secondary uppercase tracking-widest select-none">
             {project.number} ✦ NEXT
           </div>
-          <div className="absolute -top-[9px] right-0 px-2 bg-background font-mono text-[10px] text-text-secondary uppercase tracking-widest select-none">
+          <div className="absolute -top-[9px] right-0 px-2 bg-background font-mono text-[9px] sm:text-[10px] text-text-secondary uppercase tracking-widest select-none">
             INDEX 0{index + 2}
           </div>
         </div>
@@ -443,31 +443,31 @@ export default function Projects() {
       {/* Page Header */}
       <header
         ref={headerRef}
-        className="border-b border-border pb-10 sm:pb-12 space-y-4"
+        className="border-b border-border pb-8 sm:pb-12 space-y-3.5 sm:space-y-4"
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 border border-border bg-surface text-xs font-mono text-text-secondary rounded-sm">
-          <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-          <span>EDITORIAL SHOWCASE · SELECTED WORKS (2024–2026)</span>
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1 sm:px-3 sm:py-1 border border-border bg-surface text-[11px] sm:text-xs font-mono text-text-secondary rounded-sm">
+          <Sparkles className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" />
+          <span className="tracking-wide">EDITORIAL SHOWCASE · SELECTED WORKS (2024–2026)</span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-text-primary font-jakarta">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-text-primary font-jakarta">
           Featured Projects<span className="text-amber-500">.</span>
         </h1>
 
-        <p className="text-base sm:text-lg text-text-secondary max-w-2xl leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-2xl leading-relaxed">
           A curated collection of web applications, platforms, and full-stack
           systems. Each system explores high-reliability architecture, clean
           user experience, and production-grade engineering.
         </p>
 
         {/* Quick jump indices */}
-        <div className="flex flex-wrap items-center gap-3 pt-2 text-xs font-mono text-text-secondary">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-1 text-xs font-mono text-text-secondary">
           <span className="uppercase tracking-widest text-[10px]">Jump to:</span>
           {projectList.map((p) => (
             <a
               key={p.id}
               href={`#${p.id}`}
-              className="hover:text-amber-500 transition-colors border-b border-dashed border-border hover:border-amber-500 pb-0.5"
+              className="hover:text-amber-500 transition-colors border-b border-dashed border-border hover:border-amber-500 pb-0.5 text-[11px] sm:text-xs"
             >
               {p.number}. {p.title || p.name}
             </a>

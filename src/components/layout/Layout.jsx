@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Sidebar from "./Sidebar";
 import MobileNav from "./MobileNav";
+import MobileBottomBar from "./MobileBottomBar";
 import SearchModal from "@/components/features/SearchModal";
 import BackToTop from "@/components/BackToTop";
 
@@ -33,7 +34,7 @@ export default function Layout() {
         onClose={() => setIsSearchOpen(false)}
       />
 
-      <main className="flex-1 w-full max-w-5xl mx-auto p-6 pt-16 md:p-12 md:pt-8 relative">
+      <main className="flex-1 w-full max-w-5xl mx-auto p-4 pt-16 pb-24 sm:p-6 sm:pt-16 sm:pb-24 md:p-8 md:pt-8 md:pb-12 lg:p-12 lg:pt-8 relative min-w-0">
         {location.pathname !== "/" && (
           <button
             onClick={() => navigate(-1)}
@@ -66,6 +67,7 @@ export default function Layout() {
           </motion.div>
         </AnimatePresence>
       </main>
+      <MobileBottomBar />
       <BackToTop />
     </div>
   );
