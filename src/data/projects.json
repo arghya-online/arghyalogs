@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "id": "promethix3d",
+      "number": "01",
+      "name": "Promethix3D",
+      "description": "A full-stack e-commerce platform for Promethix3D, featuring an online storefront and a dedicated admin panel for managing products. It includes user authentication and product management.",
+      "technologies": ["Next.js", "Better Auth", "MongoDB", "shadcn/ui"],
+      "image": "/images/projects/promethix3d.webp",
+      "imageAlt": "Promethix3D website screenshot",
+      "liveUrl": "https://promethix3d.in",
+      "githubUrl": "https://github.com/arghya-online/promethixecommerce"
+    },
+    {
+      "id": "apkajob",
+      "number": "02",
+      "name": "ApkaJob",
+      "description": "A job portal connecting recruiters and candidates. Recruiters can post jobs, manage applications and update application statuses. Candidates can browse, search and filter jobs, apply with their resumes, save jobs and track their applications.",
+      "technologies": ["React", "Vite", "React Router", "Tailwind CSS", "shadcn/ui", "Supabase", "Clerk"],
+      "image": "/images/projects/apkajob.webp",
+      "imageAlt": "ApkaJob job portal screenshot",
+      "liveUrl": "https://apkajob.arghyalogs.in",
+      "githubUrl": "https://github.com/arghya-online/ApkaJob"
+    },
+    {
+      "id": "expenso",
+      "number": "03",
+      "name": "Expenso",
+      "description": "A personal expense management application for tracking income, expenses and financial activity. It is designed to help users manage their finances and bank accounts.",
+      "technologies": ["Next.js", "TypeScript", "MongoDB", "TanStack Query", "shadcn/ui"],
+      "image": "/images/projects/expenso.webp",
+      "imageAlt": "Expenso expense management application screenshot",
+      "liveUrl": "https://expenso.arghyalogs.in",
+      "githubUrl": "https://github.com/arghya-online/expenso"
+    },
+    {
+      "id": "bosonphysics",
+      "number": "04",
+      "name": "BosonPhysics",
+      "description": "A React landing page for an EdTech platform, featuring integrated forms built with React Hook Form. The interface uses ChatCN UI, with Google Apps Script and Google Sheets for handling form data.",
+      "technologies": ["React", "JavaScript", "React Hook Form", "ChatCN UI", "Google Apps Script", "Google Sheets"],
+      "image": "/images/projects/bosonphysics.webp",
+      "imageAlt": "BosonPhysics EdTech landing page screenshot",
+      "liveUrl": "https://www.bosonphysics.in/",
+      "githubUrl": null
+    },
+    {
+      "id": "bookyourseat",
+      "number": "05",
+      "name": "BookYourSeat",
+      "description": "A movie ticket booking application where users can browse movies, select seats and manage their bookings. It includes user authentication and a backend connected to PostgreSQL.",
+      "technologies": ["React", "React 19", "Vite", "Tailwind CSS", "Node.js", "Express.js", "PostgreSQL", "JWT"],
+      "image": "/images/projects/bookyourseat.webp",
+      "imageAlt": "BookYourSeat movie booking website screenshot",
+      "liveUrl": "https://bookyourseat.arghyalogs.in/",
+      "githubUrl": "https://github.com/arghya-online/SeatBookingApp"
+    }
+  ]
+}

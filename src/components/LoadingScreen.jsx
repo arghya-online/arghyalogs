@@ -2,107 +2,168 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export default function LoadingScreen({ onComplete }) {
-    const containerRef = useRef(null);
-    const textWrapperRef = useRef(null);
-    const subTextRef = useRef(null);
-    const progressRef = useRef(null);
-    const bgRef = useRef(null);
+  const containerRef = useRef(null);
+  const wordmarkRef = useRef(null);
+  const progressLineRef = useRef(null);
+  const subtitleRef = useRef(null);
 
-    useEffect(() => {
-        const tl = gsap.timeline({
-            onComplete: onComplete,
-        });
+  useEffect(() => {
+    // Check reduced-motion preference
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
 
+    if (prefersReducedMotion) {
+      sessionStorage.setItem("arghya_visited", "true");
+      onComplete?.();
+      return;
+    }
 
-        const chars = textWrapperRef.current.querySelectorAll(".char");
+    let isAssetReady = false;
+    let minTimeElapsed = false;
+    let isFinished = false;
 
+    // Track actual asset readiness: preload the portrait photo
+    const portraitImg = new Image();
+    portraitImg.src = "/arghya-photo.png";
 
-        tl.set(containerRef.current, { autoAlpha: 1 });
-        tl.set(chars, { y: 100, opacity: 0 });
-        tl.set(bgRef.current, { scale: 1.1 });
+    const checkReady = () => {
+      isAssetReady = true;
+      attemptCompletion();
+    };
 
+    if (portraitImg.complete) {
+      checkReady();
+    } else {
+      portraitImg.onload = checkReady;
+      portraitImg.onerror = checkReady; // Graceful fallback
+    }
 
-        tl.to(bgRef.current, {
-            scale: 1,
-            duration: 4,
-            ease: "power2.inOut",
-        }, 0);
+    // Also check document readiness
+    if (document.readyState === "complete") {
+      // document already ready
+    } else {
+      window.addEventListener("load", checkReady, { once: true });
+    }
 
-        tl.fromTo(subTextRef.current,
-            { opacity: 0, letterSpacing: "1em", filter: "blur(10px)" },
-            { opacity: 1, letterSpacing: "0.3em", filter: "blur(0px)", duration: 1.5, ease: "power3.out" },
-            0.5
+    const ctx = gsap.context(() => {
+      // Set initial states
+      gsap.set(containerRef.current, { autoAlpha: 1 });
+      gsap.set(wordmarkRef.current, { autoAlpha: 0, y: 16 });
+      gsap.set(subtitleRef.current, { autoAlpha: 0 });
+      gsap.set(progressLineRef.current, {
+        scaleX: 0,
+        transformOrigin: "left center",
+      });
+
+      // Quick entrance sequence
+      const tl = gsap.timeline();
+
+      tl.to(wordmarkRef.current, {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.45,
+        ease: "power2.out",
+      })
+        .to(
+          subtitleRef.current,
+          {
+            autoAlpha: 1,
+            duration: 0.35,
+            ease: "power2.out",
+          },
+          "-=0.2"
         )
-            .to(chars, {
-                y: 0,
-                opacity: 1,
-                stagger: 0.05,
-                duration: 1,
-                ease: "back.out(1.7)",
-            }, "-=1")
-            .fromTo(progressRef.current,
-                { scaleX: 0 },
-                { scaleX: 1, duration: 2.5, ease: "expo.inOut" },
-                "-=0.5"
-            );
+        .to(
+          progressLineRef.current,
+          {
+            scaleX: 0.65,
+            duration: 0.5,
+            ease: "power1.inOut",
+          },
+          "-=0.2"
+        );
 
+      // Elegant minimum duration (~600ms) to ensure smooth perception
+      const minTimer = setTimeout(() => {
+        minTimeElapsed = true;
+        attemptCompletion();
+      }, 550);
 
-        tl.to([textWrapperRef.current, subTextRef.current, progressRef.current], {
+      // Max safety timeout (1.3s) so no visitor is ever held up
+      const maxTimer = setTimeout(() => {
+        isAssetReady = true;
+        minTimeElapsed = true;
+        attemptCompletion();
+      }, 1300);
+
+      return () => {
+        clearTimeout(minTimer);
+        clearTimeout(maxTimer);
+      };
+    }, containerRef);
+
+    function attemptCompletion() {
+      if (!isAssetReady || !minTimeElapsed || isFinished) return;
+      isFinished = true;
+
+      // Animate progress line to 100%
+      gsap.to(progressLineRef.current, {
+        scaleX: 1,
+        duration: 0.2,
+        ease: "power2.out",
+        onComplete: () => {
+          // Seamless fade out into the hero
+          gsap.to(containerRef.current, {
             opacity: 0,
-            y: -50,
-            duration: 0.8,
-            ease: "power3.in",
-            stagger: 0.1
-        })
-            .to(containerRef.current, {
-                yPercent: -100,
-                duration: 1.2,
-                ease: "power4.inOut"
-            }, "-=0.2");
+            duration: 0.45,
+            ease: "power2.inOut",
+            onComplete: () => {
+              sessionStorage.setItem("arghya_visited", "true");
+              onComplete?.();
+            },
+          });
+        },
+      });
+    }
 
-        return () => {
-            tl.kill();
-        };
-    }, [onComplete]);
+    return () => {
+      ctx.revert();
+    };
+  }, [onComplete]);
 
-    const title = "ARGHYALOGS";
-
-    return (
-        <div
-            ref={containerRef}
-            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black text-white invisible overflow-hidden"
+  return (
+    <div
+      ref={containerRef}
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#f3f0e8] select-none"
+      role="status"
+      aria-label="Loading portfolio"
+    >
+      <div className="flex flex-col items-center text-center px-4 max-w-sm">
+        {/* Name Wordmark */}
+        <h1
+          ref={wordmarkRef}
+          className="text-4xl sm:text-5xl font-bold tracking-tight text-[#18181b] font-jakarta"
         >
-            <div ref={bgRef} className="absolute inset-0 bg-neutral-900 z-0">
-                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-80"></div>
-            </div>
+          Arghya<span className="text-[#f59e0b]">.</span>
+        </h1>
 
-            <div className="relative z-10 flex flex-col items-center w-full max-w-4xl px-4">
-                <p
-                    ref={subTextRef}
-                    className="mb-6 text-xs md:text-sm font-medium text-emerald-500 uppercase tracking-[0.3em]"
-                >
-                    Presenting
-                </p>
+        {/* Minimal Monospaced Tag */}
+        <p
+          ref={subtitleRef}
+          className="text-[11px] font-mono tracking-[0.25em] text-[#71717a] uppercase mt-2.5"
+        >
+          Portfolio &middot; Engineering
+        </p>
 
-                <h1
-                    ref={textWrapperRef}
-                    className="text-4xl md:text-6xl font-black tracking-tighter text-center font-sans overflow-hidden py-4"
-                >
-                    {title.split("").map((char, index) => (
-                        <span key={index} className="char inline-block">
-                            {char}
-                        </span>
-                    ))}
-                </h1>
-
-                <div className="w-64 h-1 bg-neutral-800 mt-12  -full overflow-hidden">
-                    <div
-                        ref={progressRef}
-                        className="h-full bg-emerald-500 w-full origin-left"
-                    />
-                </div>
-            </div>
+        {/* Thin Animated Loading Line */}
+        <div className="w-44 sm:w-52 h-[2px] bg-[#d4d4d8] mt-8 rounded-full overflow-hidden">
+          <div
+            ref={progressLineRef}
+            className="h-full w-full bg-[#18181b]"
+          />
         </div>
-    );
+      </div>
+    </div>
+  );
 }

@@ -2,20 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getAllBlogs } from "@/lib/blogs";
 import BlogCard from "@/components/features/BlogCard";
-import {
-  Github,
-  Twitter,
-  Youtube,
-  Linkedin,
-  Instagram,
-  Mail,
-  Download,
-} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { techColors } from "@/data/projects";
 import { youtubeVideos } from "@/data/youtube";
 import { socialNotes } from "@/data/socialNotes";
-import resumePdf from "@/data/ArghyaMajumdarCV.pdf";
+import Hero from "@/components/Hero";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
   const allBlogs = getAllBlogs();
@@ -23,10 +15,33 @@ export default function Home() {
   const displayedVideos = youtubeVideos.slice(0, 2);
   const displayedNotes = socialNotes.slice(0, 2);
 
+  const [showLoading, setShowLoading] = useState(() => {
+    if (typeof window !== "undefined") {
+      return !sessionStorage.getItem("arghya_visited");
+    }
+    return false;
+  });
+
+  const [heroReady, setHeroReady] = useState(() => {
+    if (typeof window !== "undefined") {
+      return !!sessionStorage.getItem("arghya_visited");
+    }
+    return true;
+  });
+
   const techStack = Object.keys(techColors);
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-24 sm:space-y-32 md:space-y-40">
+      {showLoading && (
+        <LoadingScreen
+          onComplete={() => {
+            setShowLoading(false);
+            setHeroReady(true);
+          }}
+        />
+      )}
+
       <Helmet>
         <title>Arghya Majumdar</title>
         <meta
@@ -36,131 +51,7 @@ export default function Home() {
       </Helmet>
 
       {/* HERO SECTION */}
-      <section className="space-y-8 border-b border-border pb-12">
-        {/* Status badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 border border-border bg-surface text-xs font-mono text-text-secondary">
-          <span className="w-1.5 h-1.5  -full bg-green-500 inline-block pulse-status"></span>
-          Available for work · Kolkata, India
-        </div>
-
-        {/* Name + role */}
-        <div>
-          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-none">
-            Arghya<span className="text-amber-500">.</span>
-          </h1>
-          <p className="text-xl sm:text-2xl text-text-secondary font-medium mt-3">
-            Full-stack engineer based in Kolkata.
-          </p>
-          <p className="text-sm font-mono text-text-secondary mt-3 border-l-2 border-border pl-3">
-            <span className="text-amber-500">//</span> full-stack engineer{" "}
-            <span className="text-amber-500">.</span> 3D printing{" "}
-            <span className="text-amber-500">.</span> Youtube{" "}
-            <span className="text-amber-500">.</span> Robotics{" "}
-          </p>
-        </div>
-
-        {/* Quick stats */}
-        <div className="flex gap-4 md:gap-8 pt-2 overflow-x-auto whitespace-nowrap">
-          {[
-            { value: "10+", label: "Projects shipped" },
-            { value: "2+", label: "Hackathons won" },
-            { value: "8+", label: "Robots built" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <span className="text-2xl font-bold text-text-primary">
-                {stat.value}
-              </span>
-              <p className="text-xs text-text-secondary mt-0.5">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA buttons */}
-        <div className="flex flex-wrap gap-3">
-          <Link
-            to="/projects"
-            className="px-4 py-2 text-sm font-medium bg-surface text-text-primary transition-all hover:bg-border border border-border hover:border-amber-500 hover:scale-105 hover:shadow-[0_0_20px_rgba(251,146,60,0.15)]"
-          >
-            Projects
-          </Link>
-          <Link
-            to="/portfolio"
-            className="px-4 py-2 text-sm font-medium bg-surface text-text-primary transition-all hover:bg-border border border-border hover:border-amber-500 hover:scale-105 hover:shadow-[0_0_20px_rgba(251,146,60,0.15)]"
-          >
-            Portfolio
-          </Link>
-          <Link
-            to="/blogs"
-            className="px-4 py-2 text-sm font-medium bg-surface text-text-primary transition-all hover:bg-border border border-border hover:border-amber-500 hover:scale-105 hover:shadow-[0_0_20px_rgba(251,146,60,0.15)]"
-          >
-            Blogs
-          </Link>
-          <a
-            href={resumePdf}
-            download="ArghyaMajumdarCV.pdf"
-            className="px-4 py-2 text-sm font-medium bg-surface text-text-primary transition-all hover:bg-border border border-border hover:border-amber-500 hover:scale-105 hover:shadow-[0_0_20px_rgba(251,146,60,0.15)] inline-flex items-center gap-2"
-          >
-            <Download className="w-4 h-4" />
-            Resume
-          </a>
-        </div>
-
-        {/* Social links */}
-        <div className="flex flex-wrap items-center gap-5">
-          <a
-            href="https://github.com/arghya-online"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text-secondary hover:text-[#fb923c] transition-all hover:scale-110"
-            aria-label="GitHub"
-          >
-            <Github className="h-5 w-5" />
-          </a>
-          <a
-            href="https://linkedin.com/in/arghya"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text-secondary hover:text-[#fb923c] transition-all hover:scale-110"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-5 w-5" />
-          </a>
-          <a
-            href="https://x.com/arghyabuilds"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text-secondary hover:text-[#fb923c] transition-all hover:scale-110"
-            aria-label="Twitter"
-          >
-            <Twitter className="h-5 w-5" />
-          </a>
-          <a
-            href="https://instagram.com/arghya"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text-secondary hover:text-[#fb923c] transition-all hover:scale-110"
-            aria-label="Instagram"
-          >
-            <Instagram className="h-5 w-5" />
-          </a>
-          <a
-            href="https://www.youtube.com/@arghya_explains_"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text-secondary hover:text-[#ff0000] transition-all hover:scale-110"
-            aria-label="YouTube"
-          >
-            <Youtube className="h-5 w-5" />
-          </a>
-          <a
-            href="mailto:arghyamajumdar.contact@gmail.com"
-            className="text-text-secondary hover:text-[#fb923c] transition-all hover:scale-110"
-            aria-label="Email"
-          >
-            <Mail className="h-5 w-5" />
-          </a>
-        </div>
-      </section>
+      <Hero shouldAnimate={heroReady} />
 
       <section className="space-y-4 max-w-prose">
         <h2 className="text-2xl font-bold text-text-primary">About</h2>
