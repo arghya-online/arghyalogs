@@ -12,8 +12,10 @@ export function CopyButton({ code, className = "" }) {
     return (
         <button
             onClick={handleCopy}
-            className={`flex items-center gap-2 text-xs px-2 py-1.5  -md 
-                 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition \${className}`}
+            type="button"
+            className={`flex items-center gap-2 text-xs px-2.5 py-1.5 rounded-md font-mono
+                 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 border border-zinc-800/80 transition active:scale-95 ${className}`}
+            aria-label={copied ? "Copied code" : "Copy code"}
         >
             {copied ? (
                 <>

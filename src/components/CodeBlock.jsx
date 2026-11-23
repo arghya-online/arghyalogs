@@ -87,13 +87,43 @@ export function CodeBlock({ code, language = 'html' }) {
                 /(?<=:\s*)([^;}<]+)(?=;)/g,
                 '<span class="text-[#ce9178]">$1</span>'
             );
+        } else if (language === 'matlab' || language === 'm') {
+            // 1. Comments: Green (% ...)
+            safeCode = safeCode.replace(
+                /(%.*$)/gm,
+                '<span class="text-[#6a9955]">$1</span>'
+            );
+
+            // 2. Strings: Orange ('...')
+            safeCode = safeCode.replace(
+                /(?<!<span[^>]*>)('[^'\n]*')(?!<\/span>)/g,
+                '<span class="text-[#ce9178]">$1</span>'
+            );
+
+            // 3. Control keywords: Purple
+            safeCode = safeCode.replace(
+                /(?<!<span[^>]*>)\b(clc|clear|close|all|clf|figure|grid|on|off|hold|disp|drawnow|if|else|elseif|end|for|while|function|return)\b(?!<\/span>)/g,
+                '<span class="text-[#c586c0]">$1</span>'
+            );
+
+            // 4. Built-in control / math / graphics functions: Yellow
+            safeCode = safeCode.replace(
+                /(?<!<span[^>]*>)\b(tf|feedback|step|stepinfo|legend|title|xlabel|ylabel|zlabel|plot|plot3|axis|view|sprintf|zeros|ones|linspace|size|eye|mean|min|max|abs|log|exp|sqrt|table|sin|cos|tan|atan2|pi)\b(?!<\/span>)/g,
+                '<span class="text-[#dcdcaa]">$1</span>'
+            );
+
+            // 5. Numbers: Light Green
+            safeCode = safeCode.replace(
+                /(?<!<span[^>]*>)(?<![a-zA-Z_])(\d+\.?\d*)(?![a-zA-Z_])(?!<\/span>)/g,
+                '<span class="text-[#b5cea8]">$1</span>'
+            );
         }
 
         return safeCode;
     };
 
     return (
-        <div className="my-6 overflow-hidden  -xl border border-zinc-800 bg-[#0d1117]">
+        <div className="my-6 overflow-hidden rounded-xl border border-zinc-800 bg-[#0d1117]">
             {/* Header Bar */}
             <div className="flex items-center justify-between px-4 py-2 border-b border-zinc-800 bg-[#0d1117] text-zinc-400">
                 <span className="text-xs font-mono uppercase tracking-wider select-none">{language}</span>
